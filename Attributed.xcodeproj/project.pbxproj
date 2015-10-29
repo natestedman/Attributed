@@ -33,7 +33,7 @@
 		43C993C81BE3B9C700CF90DD /* Attributed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Attributed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C993CB1BE3B9C700CF90DD /* Attributed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Attributed.h; sourceTree = "<group>"; };
 		43C993CD1BE3B9C700CF90DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		43C993D21BE3B9C700CF90DD /* AttributedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AttributedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		43C993D21BE3B9C700CF90DD /* Attributed-OSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Attributed-OSXTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C993D71BE3B9C700CF90DD /* AttributedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedTests.swift; sourceTree = "<group>"; };
 		43C993D91BE3B9C700CF90DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43C993E21BE3BAA100CF90DD /* GeneralFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralFunctions.swift; sourceTree = "<group>"; };
@@ -77,7 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				43C993C81BE3B9C700CF90DD /* Attributed.framework */,
-				43C993D21BE3B9C700CF90DD /* AttributedTests.xctest */,
+				43C993D21BE3B9C700CF90DD /* Attributed-OSXTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,9 +121,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		43C993C71BE3B9C700CF90DD /* Attributed */ = {
+		43C993C71BE3B9C700CF90DD /* Attributed-OSX */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 43C993DC1BE3B9C700CF90DD /* Build configuration list for PBXNativeTarget "Attributed" */;
+			buildConfigurationList = 43C993DC1BE3B9C700CF90DD /* Build configuration list for PBXNativeTarget "Attributed-OSX" */;
 			buildPhases = (
 				43C993C31BE3B9C700CF90DD /* Sources */,
 				43C993C41BE3B9C700CF90DD /* Frameworks */,
@@ -134,14 +134,14 @@
 			);
 			dependencies = (
 			);
-			name = Attributed;
+			name = "Attributed-OSX";
 			productName = Attributed;
 			productReference = 43C993C81BE3B9C700CF90DD /* Attributed.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		43C993D11BE3B9C700CF90DD /* AttributedTests */ = {
+		43C993D11BE3B9C700CF90DD /* Attributed-OSXTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 43C993DF1BE3B9C700CF90DD /* Build configuration list for PBXNativeTarget "AttributedTests" */;
+			buildConfigurationList = 43C993DF1BE3B9C700CF90DD /* Build configuration list for PBXNativeTarget "Attributed-OSXTests" */;
 			buildPhases = (
 				43C993CE1BE3B9C700CF90DD /* Sources */,
 				43C993CF1BE3B9C700CF90DD /* Frameworks */,
@@ -152,9 +152,9 @@
 			dependencies = (
 				43C993D51BE3B9C700CF90DD /* PBXTargetDependency */,
 			);
-			name = AttributedTests;
+			name = "Attributed-OSXTests";
 			productName = AttributedTests;
-			productReference = 43C993D21BE3B9C700CF90DD /* AttributedTests.xctest */;
+			productReference = 43C993D21BE3B9C700CF90DD /* Attributed-OSXTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -187,8 +187,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				43C993C71BE3B9C700CF90DD /* Attributed */,
-				43C993D11BE3B9C700CF90DD /* AttributedTests */,
+				43C993C71BE3B9C700CF90DD /* Attributed-OSX */,
+				43C993D11BE3B9C700CF90DD /* Attributed-OSXTests */,
 			);
 		};
 /* End PBXProject section */
@@ -238,7 +238,7 @@
 /* Begin PBXTargetDependency section */
 		43C993D51BE3B9C700CF90DD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 43C993C71BE3B9C700CF90DD /* Attributed */;
+			target = 43C993C71BE3B9C700CF90DD /* Attributed-OSX */;
 			targetProxy = 43C993D41BE3B9C700CF90DD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -344,7 +344,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.natestedman.Attributed;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Attributed;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -364,7 +364,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.natestedman.Attributed;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Attributed;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -403,21 +403,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		43C993DC1BE3B9C700CF90DD /* Build configuration list for PBXNativeTarget "Attributed" */ = {
+		43C993DC1BE3B9C700CF90DD /* Build configuration list for PBXNativeTarget "Attributed-OSX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				43C993DD1BE3B9C700CF90DD /* Debug */,
 				43C993DE1BE3B9C700CF90DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		43C993DF1BE3B9C700CF90DD /* Build configuration list for PBXNativeTarget "AttributedTests" */ = {
+		43C993DF1BE3B9C700CF90DD /* Build configuration list for PBXNativeTarget "Attributed-OSXTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				43C993E01BE3B9C700CF90DD /* Debug */,
 				43C993E11BE3B9C700CF90DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
