@@ -8,9 +8,35 @@
 // You should have received a copy of the CC0 Public Domain Dedication along with
 // this software. If not, see <http://creativecommons.org/publicdomain/zero/1.0/>.
 
+import Attributed
 import XCTest
-@testable import Attributed
 
 class AttributedTests: XCTestCase
 {
+    func testNestedColors()
+    {
+        let attributed = Color(
+            NSColor.redColor(),
+            "Test",
+            Color(
+                NSColor.blueColor(),
+                "Test",
+                Color(
+                    NSColor.greenColor(),
+                    "Test"
+                ),
+                "Test"
+            ),
+            "Test"
+        ).attributedString
+        
+        let mutable = NSMutableAttributedString(string: "TestTestTestTestTest")
+        mutable.addAttribute(NSForegroundColorAttributeName, value: NSColor.redColor(), range: NSMakeRange(0, 4))
+        mutable.addAttribute(NSForegroundColorAttributeName, value: NSColor.blueColor(), range: NSMakeRange(4, 4))
+        mutable.addAttribute(NSForegroundColorAttributeName, value: NSColor.greenColor(), range: NSMakeRange(8, 4))
+        mutable.addAttribute(NSForegroundColorAttributeName, value: NSColor.blueColor(), range: NSMakeRange(12, 4))
+        mutable.addAttribute(NSForegroundColorAttributeName, value: NSColor.redColor(), range: NSMakeRange(16, 4))
+        
+        XCTAssertEqual(attributed, mutable)
+    }
 }
