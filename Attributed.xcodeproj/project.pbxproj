@@ -10,6 +10,7 @@
 		43C993CC1BE3B9C700CF90DD /* Attributed.h in Headers */ = {isa = PBXBuildFile; fileRef = 43C993CB1BE3B9C700CF90DD /* Attributed.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		43C993D31BE3B9C700CF90DD /* Attributed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C993C81BE3B9C700CF90DD /* Attributed.framework */; };
 		43C993D81BE3B9C700CF90DD /* AttributedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C993D71BE3B9C700CF90DD /* AttributedTests.swift */; };
+		43C993E91BE3BDC000CF90DD /* PlatformTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C993E81BE3BDC000CF90DD /* PlatformTypes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		43C993D21BE3B9C700CF90DD /* AttributedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AttributedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C993D71BE3B9C700CF90DD /* AttributedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedTests.swift; sourceTree = "<group>"; };
 		43C993D91BE3B9C700CF90DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43C993E81BE3BDC000CF90DD /* PlatformTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatformTypes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				43C993CB1BE3B9C700CF90DD /* Attributed.h */,
+				43C993E81BE3BDC000CF90DD /* PlatformTypes.swift */,
 				43C993CD1BE3B9C700CF90DD /* Info.plist */,
 			);
 			path = Attributed;
@@ -194,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43C993E91BE3BDC000CF90DD /* PlatformTypes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
