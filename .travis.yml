@@ -1,0 +1,8 @@
+language: objective-c
+xcode_project: Attributed.xcodeproj
+xcode_scheme: Attributed-OSX
+osx_image: xcode7.1
+before_install: true
+install: true
+git:
+  submodules: false
