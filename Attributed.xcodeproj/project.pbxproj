@@ -14,6 +14,7 @@
 		43C993E51BE3BAD300CF90DD /* NestedAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C993E41BE3BAD300CF90DD /* NestedAttributedString.swift */; };
 		43C993E71BE3BB0B00CF90DD /* AttributedStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C993E61BE3BB0A00CF90DD /* AttributedStringConvertible.swift */; };
 		43C993E91BE3BDC000CF90DD /* PlatformTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C993E81BE3BDC000CF90DD /* PlatformTypes.swift */; };
+		43C993EB1BE3C1D300CF90DD /* AttributeFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C993EA1BE3C1D300CF90DD /* AttributeFunctions.swift */; };
 		43C993ED1BE3C2E800CF90DD /* AttributedLigature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C993EC1BE3C2E800CF90DD /* AttributedLigature.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		43C993E41BE3BAD300CF90DD /* NestedAttributedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NestedAttributedString.swift; sourceTree = "<group>"; };
 		43C993E61BE3BB0A00CF90DD /* AttributedStringConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedStringConvertible.swift; sourceTree = "<group>"; };
 		43C993E81BE3BDC000CF90DD /* PlatformTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatformTypes.swift; sourceTree = "<group>"; };
+		43C993EA1BE3C1D300CF90DD /* AttributeFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributeFunctions.swift; sourceTree = "<group>"; };
 		43C993EC1BE3C2E800CF90DD /* AttributedLigature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedLigature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +86,7 @@
 				43C993CB1BE3B9C700CF90DD /* Attributed.h */,
 				43C993EC1BE3C2E800CF90DD /* AttributedLigature.swift */,
 				43C993E61BE3BB0A00CF90DD /* AttributedStringConvertible.swift */,
+				43C993EA1BE3C1D300CF90DD /* AttributeFunctions.swift */,
 				43C993E21BE3BAA100CF90DD /* GeneralFunctions.swift */,
 				43C993E41BE3BAD300CF90DD /* NestedAttributedString.swift */,
 				43C993E81BE3BDC000CF90DD /* PlatformTypes.swift */,
@@ -212,6 +215,7 @@
 				43C993E91BE3BDC000CF90DD /* PlatformTypes.swift in Sources */,
 				43C993E51BE3BAD300CF90DD /* NestedAttributedString.swift in Sources */,
 				43C993E31BE3BAA100CF90DD /* GeneralFunctions.swift in Sources */,
+				43C993EB1BE3C1D300CF90DD /* AttributeFunctions.swift in Sources */,
 				43C993ED1BE3C2E800CF90DD /* AttributedLigature.swift in Sources */,
 				43C993E71BE3BB0B00CF90DD /* AttributedStringConvertible.swift in Sources */,
 			);
