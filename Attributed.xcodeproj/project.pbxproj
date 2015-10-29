@@ -16,6 +16,7 @@
 		43C993E91BE3BDC000CF90DD /* PlatformTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C993E81BE3BDC000CF90DD /* PlatformTypes.swift */; };
 		43C993EB1BE3C1D300CF90DD /* AttributeFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C993EA1BE3C1D300CF90DD /* AttributeFunctions.swift */; };
 		43C993ED1BE3C2E800CF90DD /* AttributedLigature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C993EC1BE3C2E800CF90DD /* AttributedLigature.swift */; };
+		43C993F11BE3C9CE00CF90DD /* AttributedStringConvertibleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C993F01BE3C9CE00CF90DD /* AttributedStringConvertibleTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 		43C993E81BE3BDC000CF90DD /* PlatformTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatformTypes.swift; sourceTree = "<group>"; };
 		43C993EA1BE3C1D300CF90DD /* AttributeFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributeFunctions.swift; sourceTree = "<group>"; };
 		43C993EC1BE3C2E800CF90DD /* AttributedLigature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedLigature.swift; sourceTree = "<group>"; };
+		43C993F01BE3C9CE00CF90DD /* AttributedStringConvertibleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedStringConvertibleTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				43C993D71BE3B9C700CF90DD /* AttributedTests.swift */,
+				43C993F01BE3C9CE00CF90DD /* AttributedStringConvertibleTests.swift */,
 				43C993D91BE3B9C700CF90DD /* Info.plist */,
 			);
 			path = AttributedTests;
@@ -226,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43C993D81BE3B9C700CF90DD /* AttributedTests.swift in Sources */,
+				43C993F11BE3C9CE00CF90DD /* AttributedStringConvertibleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
