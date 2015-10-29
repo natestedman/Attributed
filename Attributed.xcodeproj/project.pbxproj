@@ -12,6 +12,7 @@
 		43C993D81BE3B9C700CF90DD /* AttributedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C993D71BE3B9C700CF90DD /* AttributedTests.swift */; };
 		43C993E71BE3BB0B00CF90DD /* AttributedStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C993E61BE3BB0A00CF90DD /* AttributedStringConvertible.swift */; };
 		43C993E91BE3BDC000CF90DD /* PlatformTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C993E81BE3BDC000CF90DD /* PlatformTypes.swift */; };
+		43C993ED1BE3C2E800CF90DD /* AttributedLigature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C993EC1BE3C2E800CF90DD /* AttributedLigature.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,7 @@
 		43C993D91BE3B9C700CF90DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43C993E61BE3BB0A00CF90DD /* AttributedStringConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedStringConvertible.swift; sourceTree = "<group>"; };
 		43C993E81BE3BDC000CF90DD /* PlatformTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatformTypes.swift; sourceTree = "<group>"; };
+		43C993EC1BE3C2E800CF90DD /* AttributedLigature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedLigature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				43C993CB1BE3B9C700CF90DD /* Attributed.h */,
+				43C993EC1BE3C2E800CF90DD /* AttributedLigature.swift */,
 				43C993E61BE3BB0A00CF90DD /* AttributedStringConvertible.swift */,
 				43C993E81BE3BDC000CF90DD /* PlatformTypes.swift */,
 				43C993CD1BE3B9C700CF90DD /* Info.plist */,
@@ -201,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43C993E91BE3BDC000CF90DD /* PlatformTypes.swift in Sources */,
+				43C993ED1BE3C2E800CF90DD /* AttributedLigature.swift in Sources */,
 				43C993E71BE3BB0B00CF90DD /* AttributedStringConvertible.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
