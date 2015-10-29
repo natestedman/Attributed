@@ -623,6 +623,7 @@
 				43C9940C1BE3DDF900CF90DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		43C9940D1BE3DDF900CF90DD /* Build configuration list for PBXNativeTarget "Attributed-iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -631,6 +632,7 @@
 				43C9940F1BE3DDF900CF90DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
