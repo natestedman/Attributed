@@ -17,7 +17,7 @@
     /// A typealias for UIColor
     public typealias ColorType = UIColor
 #else
-    import Cocoa
+    import AppKit
     
     /// A typealias for NSFont
     public typealias FontType = NSFont
