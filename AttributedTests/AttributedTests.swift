@@ -39,4 +39,30 @@ class AttributedTests: XCTestCase
         
         XCTAssertEqual(attributed, mutable)
     }
+    
+    func testDeepNesting()
+    {
+        let attributed = Kern(
+            10,
+            "Test",
+            Color(
+                ColorType.blueColor(),
+                "Test",
+                Color(
+                    ColorType.greenColor(),
+                    "Test"
+                ),
+                "Test"
+            ),
+            "Test"
+        ).attributedString
+        
+        let mutable = NSMutableAttributedString(string: "TestTestTestTestTest")
+        mutable.addAttribute(NSKernAttributeName, value: 10, range: NSMakeRange(0, 20))
+        mutable.addAttribute(NSForegroundColorAttributeName, value: ColorType.blueColor(), range: NSMakeRange(4, 4))
+        mutable.addAttribute(NSForegroundColorAttributeName, value: ColorType.greenColor(), range: NSMakeRange(8, 4))
+        mutable.addAttribute(NSForegroundColorAttributeName, value: ColorType.blueColor(), range: NSMakeRange(12, 4))
+        
+        XCTAssertEqual(attributed, mutable)
+    }
 }
