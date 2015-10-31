@@ -32,7 +32,7 @@ label.attributedText = Join(
 
 The `Join` function can be used to combine attributed strings without applying any additional attributes.
 
-Any value that conforms to the `AttributedStringConvertable` protocol can be passed as an argument. Implementations for `NSAttributedString` and `String` are included. All attribute functions return a value of this protocol type.
+Any value that conforms to the `AttributedStringConvertible` protocol can be passed as an argument. Implementations for `NSAttributedString` and `String` are included. All attribute functions return a value of this protocol type.
 
 ### Scoping
 Outer attributed values *do not* override inner values, so this code works as expected:
