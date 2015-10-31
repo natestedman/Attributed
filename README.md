@@ -61,7 +61,7 @@ The supported attribute functions are:
 - `Ligature`, which maps to `NSLigatureAttributeName`. This function uses the `AttributedLigature` enumeration instead of raw integer values.
 - `Style`, which maps to `NSParagraphStyleAttributeName`.
 
-All of these functions take the value of the attribute as the first value, and an arbitrary number of `AttributedStringConvertible` values afterwards.
+All of these functions take the value of the attribute as the first value, and an arbitrary number of `AttributedStringConvertible` values afterwards. For composition in other functions, versions taking an `[AttributedStringConvertible]` parameter are also provided.
 
 ### Custom Attributes
 Custom attributes can be added with the `Attribute` and `Attributes` functions.
