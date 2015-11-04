@@ -15,14 +15,11 @@ class AttributedTests: XCTestCase
 {
     func testNestedColors()
     {
-        let attributed = Color(
-            ColorType.redColor(),
+        let attributed = ColorType.redColor().foregroundAttribute(
             "Test",
-            Color(
-                ColorType.blueColor(),
+            ColorType.blueColor().foregroundAttribute(
                 "Test",
-                Color(
-                    ColorType.greenColor(),
+                ColorType.greenColor().foregroundAttribute(
                     "Test"
                 ),
                 "Test"
@@ -45,11 +42,9 @@ class AttributedTests: XCTestCase
         let attributed = Kern(
             10,
             "Test",
-            Color(
-                ColorType.blueColor(),
+            ColorType.blueColor().foregroundAttribute(
                 "Test",
-                Color(
-                    ColorType.greenColor(),
+                ColorType.greenColor().foregroundAttribute(
                     "Test"
                 ),
                 "Test"

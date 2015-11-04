@@ -8,6 +8,12 @@
 // You should have received a copy of the CC0 Public Domain Dedication along with
 // this software. If not, see <http://creativecommons.org/publicdomain/zero/1.0/>.
 
+#if os(iOS)
+    import UIKit
+#else
+    import AppKit
+#endif
+
 public extension ColorType
 {
     /**
@@ -19,7 +25,7 @@ public extension ColorType
      */
     public func foregroundAttribute(strings: AttributedStringConvertible...) -> AttributedStringConvertible
     {
-        return Color(self, strings)
+        return Attribute(NSForegroundColorAttributeName, self, strings)
     }
     
     /**
@@ -31,7 +37,7 @@ public extension ColorType
      */
     public func foregroundAttribute(strings: [AttributedStringConvertible]) -> AttributedStringConvertible
     {
-        return Color(self, strings)
+        return Attribute(NSForegroundColorAttributeName, self, strings)
     }
     
     /**
@@ -43,7 +49,7 @@ public extension ColorType
      */
     public func backgroundAttribute(strings: AttributedStringConvertible...) -> AttributedStringConvertible
     {
-        return Background(self, strings)
+        return Attribute(NSBackgroundColorAttributeName, self, strings)
     }
     
     /**
@@ -55,6 +61,6 @@ public extension ColorType
      */
     public func backgroundAttribute(strings: [AttributedStringConvertible]) -> AttributedStringConvertible
     {
-        return Background(self, strings)
+        return Attribute(NSBackgroundColorAttributeName, self, strings)
     }
 }

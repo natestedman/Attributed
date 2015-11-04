@@ -43,32 +43,6 @@ public func Attachment(attachment: NSTextAttachment, _ strings: [AttributedStrin
 }
 
 /**
- Applies a background color attribute to the enclosed attributed strings.
- 
- The background color will not override a background color set deeper in the hierarchy.
- 
- - parameter color:   The background color.
- - parameter strings: The attributed strings to apply the background color to.
- */
-public func Background(color: ColorType, _ strings: AttributedStringConvertible...) -> AttributedStringConvertible
-{
-    return Attribute(NSBackgroundColorAttributeName, color, strings)
-}
-
-/**
- Applies a background color attribute to the enclosed attributed strings.
- 
- The background color will not override a background color set deeper in the hierarchy.
- 
- - parameter color:   The background color.
- - parameter strings: The attributed strings to apply the background color to.
- */
-public func Background(color: ColorType, _ strings: [AttributedStringConvertible]) -> AttributedStringConvertible
-{
-    return Attribute(NSBackgroundColorAttributeName, color, strings)
-}
-
-/**
  Applies a baseline offset attribute to the enclosed attributed strings.
  
  The baseline offset value will not override a baseline offset value set deeper in the hierarchy.
@@ -92,32 +66,6 @@ public func BaselineOffset(offset: CGFloat, _ strings: AttributedStringConvertib
 public func BaselineOffset(offset: CGFloat, _ strings: [AttributedStringConvertible]) -> AttributedStringConvertible
 {
     return Attribute(NSBaselineOffsetAttributeName, offset, strings)
-}
-
-/**
- Applies a foreground color attribute to the enclosed attributed strings.
- 
- The foreground color will not override a foreground color set deeper in the hierarchy.
- 
- - parameter color:   The foreground color.
- - parameter strings: The attributed strings to apply the foreground color to.
- */
-public func Color(color: ColorType, _ strings: AttributedStringConvertible...) -> AttributedStringConvertible
-{
-    return Attribute(NSForegroundColorAttributeName, color, strings)
-}
-
-/**
- Applies a foreground color attribute to the enclosed attributed strings.
- 
- The foreground color will not override a foreground color set deeper in the hierarchy.
- 
- - parameter color:   The foreground color.
- - parameter strings: The attributed strings to apply the foreground color to.
- */
-public func Color(color: ColorType, _ strings: [AttributedStringConvertible]) -> AttributedStringConvertible
-{
-    return Attribute(NSForegroundColorAttributeName, color, strings)
 }
 
 /**

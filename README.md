@@ -11,8 +11,7 @@ Attributed strings are composed through function calls that take an attribute va
 ```swift
 label.attributedText = Join(
     "This is a string with ",
-    Color(
-        UIColor.blueColor(),
+    UIColor.blueColor().foregroundAttribute(
         "blue ",
         Kern(
             100,
@@ -21,8 +20,7 @@ label.attributedText = Join(
         " text"
     ),
     " and ",
-    Color(
-        UIColor.redColor(),
+    UIColor.redColor().foregroundAttribute(
         NSAttributedString(string: "red", attributes: ["Custom": "Value"]),
         " text"
     ),
@@ -38,11 +36,9 @@ Any value that conforms to the `AttributedStringConvertible` protocol can be pas
 Outer attributed values *do not* override inner values, so this code works as expected:
 
 ```swift
-Color(
-    UIColor.greenColor(),
+UIColor.greenColor().foregroundAttribute(
     "There is some ",
-    Color(
-        UIColor.blueColor(),
+    UIColor.blueColor().foregroundAttribute(
         "blue text "
     ),
     "embedded in this green text."
@@ -67,8 +63,7 @@ All of these functions take the value of the attribute as the first value, and a
 Custom attributes can be added with the `Attribute` and `Attributes` functions.
 
 ```swift
-Color(
-    UIColor.blueColor(),
+UIColor.blueColor().foregroundColor(
     "This is a blue string with a ",
     Attributes(
         ["Custom": "Value"],
