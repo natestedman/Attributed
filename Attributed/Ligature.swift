@@ -9,7 +9,7 @@
 // this software. If not, see <http://creativecommons.org/publicdomain/zero/1.0/>.
 
 /// Enumerates supported ligature settings.
-public enum AttributedLigature: Int
+public enum Ligature: Int
 {
     /// No ligatures will be used.
     case None = 0

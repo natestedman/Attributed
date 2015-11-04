@@ -14,7 +14,7 @@
     import AppKit
 #endif
 
-public extension AttributedLigature
+public extension Ligature
 {
     /**
      Applies a ligature setting to the enclosed attributed strings.
