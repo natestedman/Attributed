@@ -8,6 +8,12 @@
 // You should have received a copy of the CC0 Public Domain Dedication along with
 // this software. If not, see <http://creativecommons.org/publicdomain/zero/1.0/>.
 
+#if os(iOS)
+    import UIKit
+#else
+    import AppKit
+#endif
+
 public extension FontType
 {
     /**
@@ -19,7 +25,7 @@ public extension FontType
      */
     public func attribute(strings: AttributedStringConvertible...) -> AttributedStringConvertible
     {
-        return Font(self, strings)
+        return Attribute(NSFontAttributeName, self, strings)
     }
     
     /**
@@ -31,6 +37,6 @@ public extension FontType
      */
     public func attribute(strings: [AttributedStringConvertible]) -> AttributedStringConvertible
     {
-        return Font(self, strings)
+        return Attribute(NSFontAttributeName, self, strings)
     }
 }

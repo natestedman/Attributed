@@ -41,32 +41,6 @@ public func BaselineOffset(offset: CGFloat, _ strings: [AttributedStringConverti
 }
 
 /**
- Applies a font attribute to the enclosed attributed strings.
- 
- The font will not override a font set deeper in the hierarchy.
- 
- - parameter font:    The font.
- - parameter strings: The attributed strings to apply the font to.
- */
-public func Font(font: FontType, _ strings: AttributedStringConvertible...) -> AttributedStringConvertible
-{
-    return Attribute(NSFontAttributeName, font, strings)
-}
-
-/**
- Applies a font attribute to the enclosed attributed strings.
- 
- The font will not override a font set deeper in the hierarchy.
- 
- - parameter font:    The font.
- - parameter strings: The attributed strings to apply the font to.
- */
-public func Font(font: FontType, _ strings: [AttributedStringConvertible]) -> AttributedStringConvertible
-{
-    return Attribute(NSFontAttributeName, font, strings)
-}
-
-/**
  Applies a kerning attribute to the enclosed attributed strings.
  
  The kerning value will not override a kerning value set deeper in the hierarchy.
