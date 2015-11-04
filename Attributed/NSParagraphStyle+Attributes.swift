@@ -25,7 +25,7 @@ public extension NSParagraphStyle
      */
     public func attribute(strings: AttributedStringConvertible...) -> AttributedStringConvertible
     {
-        return Style(self, strings)
+        return Attribute(NSParagraphStyleAttributeName, self, strings)
     }
     
     /**
@@ -37,6 +37,6 @@ public extension NSParagraphStyle
      */
     public func attribute(strings: [AttributedStringConvertible]) -> AttributedStringConvertible
     {
-        return Style(self, strings)
+        return Attribute(NSParagraphStyleAttributeName, self, strings)
     }
 }

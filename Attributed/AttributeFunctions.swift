@@ -65,29 +65,3 @@ public func Kern(kerning: CGFloat, _ strings: [AttributedStringConvertible]) -> 
 {
     return Attribute(NSKernAttributeName, kerning, strings)
 }
-
-/**
- Applies a paragraph style to the enclosed attributed strings.
- 
- The paragraph style will not override a paragraph style set deeper n the hierarchy.
- 
- - parameter style:   The paragraph style.
- - parameter strings: The attributed strings to apply the paragraph style to.
- */
-public func Style(style: NSParagraphStyle, _ strings: AttributedStringConvertible...) -> AttributedStringConvertible
-{
-    return Attribute(NSParagraphStyleAttributeName, style, strings)
-}
-
-/**
- Applies a paragraph style to the enclosed attributed strings.
- 
- The paragraph style will not override a paragraph style set deeper n the hierarchy.
- 
- - parameter style:   The paragraph style.
- - parameter strings: The attributed strings to apply the paragraph style to.
- */
-public func Style(style: NSParagraphStyle, _ strings: [AttributedStringConvertible]) -> AttributedStringConvertible
-{
-    return Attribute(NSParagraphStyleAttributeName, style, strings)
-}
