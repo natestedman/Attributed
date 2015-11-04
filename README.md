@@ -56,7 +56,7 @@ The framework types extended with attribute functions are:
 - `NSParagraphStyle`: `attribute`, which maps to `NSParagraphStyleAttributeName`.
 
 #### Numeric Types
-Attributes with numeric values use the `NSNumberConvertible` property. The framework provides implementations for these types:
+Attributes with numeric values use the `NSNumberConvertible` protocol. The framework provides implementations for these types:
 
 - `NSNumber`
 - `Int`
