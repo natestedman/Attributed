@@ -6,7 +6,7 @@
 A Swift DSL for `NSAttributedString`.
 
 ## Usage
-Attributed strings are composed through function calls that take an attribute value, followed by a list of attributed string values to apply the attributes to. The return values of these function calls can be included within lists passed to other function calls, creating a nested structure.
+Attributed strings are composed through function calls on extensions of attribute value types, where the parameter is a list of attributed string values to apply the attributes to. The return values of these function calls can be included within lists passed to other function calls, creating a nested structure.
 
 ```swift
 label.attributedText = Join(
@@ -29,7 +29,7 @@ label.attributedText = Join(
 
 The `Join` function can be used to combine attributed strings without applying any additional attributes.
 
-Any value that conforms to the `AttributedStringConvertible` protocol can be passed as an argument. Implementations for `NSAttributedString` and `String` are included. All attribute functions return a value of this protocol type.
+Any value that conforms to the `AttributedStringConvertible` protocol can be passed as an argument. Implementations for `NSAttributedString` and `String` are included, so it shouldn't be necessary to implement this type. All attribute functions return a value of this protocol type. It can be unwrapped into a `NSAttributedString` with the `attributedString` property.
 
 ### Scoping
 Outer attributed values *do not* override inner values, so this code works as expected:
@@ -44,21 +44,50 @@ UIColor.greenColor().foregroundAttribute(
 )
 ```
 
-### Standard Attributes
-The supported attribute functions are:
+### Attributes
+The provided attribute functions take the value of the attribute as the first value, and a variadic number of `AttributedStringConvertible` values afterwards. For composition in other functions, versions with a single `[AttributedStringConvertible]` parameter are also provided for all functions.
 
-- `Attachment`, which maps to `NSAttachmentAttributeName`.
-- `Background`, which maps to `NSBackgroundColorAttributeName`.
-- `BaselineOffset`, which maps to `NSBaselineOffsetAttributeName`.
-- `Color`, which maps to `NSForegroundColorAttributeName`. This function takes an argument of `ColorType`, which is a typealias for `NSColor` on OS X and `UIColor` on iOS.
-- `Font`, which maps to `NSFontAttributeName`. This function takes an argument of `FontType`, which is a typealias for `NSFont` on OS X and `UIFont` on iOS.
-- `Kern`, which maps to `NSKernAttributeName`.
-- `Ligature`, which maps to `NSLigatureAttributeName`. This function uses the `AttributedLigature` enumeration instead of raw integer values.
-- `Style`, which maps to `NSParagraphStyleAttributeName`.
+#### Framework Types
+The framework types extended with attribute functions are:
 
-All of these functions take the value of the attribute as the first value, and an arbitrary number of `AttributedStringConvertible` values afterwards. For composition in other functions, versions taking an `[AttributedStringConvertible]` parameter are also provided.
+- `NSColor`/`UIColor`: `foregroundAttribute`, which maps to `NSForegroundColorAttributeName`, and `backgroundAttribute`, which maps to `NSBackgroundColorAttributeName`
+- `NSFont`/`UIFont`: `attribute`, which maps to `NSFontAttributeName`.
+- `NSTextAttachment`: `attribute`, which maps to `NSAttachmentAttributeName`.
+- `NSParagraphStyle`: `attribute`, which maps to `NSParagraphStyleAttributeName`.
 
-### Custom Attributes
+#### Numeric Types
+Attributes with numeric values use the `NSNumberConvertible` property. The framework provides implementations for these types:
+
+- `NSNumber`
+- `Int`
+- `UInt`
+- `Int8`
+- `UInt8`
+- `Int16`
+- `UInt16`
+- `Int32`
+- `UInt32`
+- `Int64`
+- `UInt64`
+- `Float`
+- `Double`
+- `CGFloat`
+
+Types that conform to `NSNumberConvertible` are extended with these functions:
+
+- `baselineOffsetAttribute`, which maps to `NSBaselineOffsetAttributeName`.
+- `kernAttribute`, which maps to `NSKernAttributeName`.
+
+#### Ligatures
+To enforce valid values for the ligature attribute, the `Ligature` type is declared as an enumeration, with the cases:
+
+- `None`
+- `Default`
+- `All` (this case is only available on OS X)
+
+The `Ligature` enumeration is extended with the `attribute` function, which maps to `NSLigatureAttributeName`.
+
+#### Custom Attributes
 Custom attributes can be added with the `Attribute` and `Attributes` functions.
 
 ```swift
