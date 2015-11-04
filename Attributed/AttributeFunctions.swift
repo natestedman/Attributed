@@ -15,34 +15,6 @@
 #endif
 
 /**
- Applies a text attachment attribute to the enclosed attributed strings.
- 
- The text attachment value will not override a text attachment value set deeper in the hierarchy.
- 
- - parameter attachment: The text attachment setting.
- - parameter strings:    The attributed strings to apply the text attachment to.
- */
-public func Attachment(attachment: NSTextAttachment, _ strings: AttributedStringConvertible...)
-    -> AttributedStringConvertible
-{
-    return Attribute(NSAttachmentAttributeName, attachment, strings)
-}
-
-/**
- Applies a text attachment attribute to the enclosed attributed strings.
- 
- The text attachment value will not override a text attachment value set deeper in the hierarchy.
- 
- - parameter attachment: The text attachment setting.
- - parameter strings:    The attributed strings to apply the text attachment to.
- */
-public func Attachment(attachment: NSTextAttachment, _ strings: [AttributedStringConvertible])
-    -> AttributedStringConvertible
-{
-    return Attribute(NSAttachmentAttributeName, attachment, strings)
-}
-
-/**
  Applies a baseline offset attribute to the enclosed attributed strings.
  
  The baseline offset value will not override a baseline offset value set deeper in the hierarchy.
