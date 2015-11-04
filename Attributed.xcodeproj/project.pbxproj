@@ -19,6 +19,8 @@
 		43C752411BEA61B000F928E5 /* Ligature+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C7523F1BEA61B000F928E5 /* Ligature+Attributes.swift */; };
 		43C752431BEA699300F928E5 /* NSNumberConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C752421BEA699300F928E5 /* NSNumberConvertible.swift */; };
 		43C752441BEA699300F928E5 /* NSNumberConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C752421BEA699300F928E5 /* NSNumberConvertible.swift */; };
+		43C752461BEA6B1400F928E5 /* NSNumberConvertible+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C752451BEA6B1400F928E5 /* NSNumberConvertible+Attributes.swift */; };
+		43C752471BEA6B1400F928E5 /* NSNumberConvertible+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C752451BEA6B1400F928E5 /* NSNumberConvertible+Attributes.swift */; };
 		43C993CC1BE3B9C700CF90DD /* Attributed.h in Headers */ = {isa = PBXBuildFile; fileRef = 43C993CB1BE3B9C700CF90DD /* Attributed.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		43C993D31BE3B9C700CF90DD /* Attributed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C993C81BE3B9C700CF90DD /* Attributed.framework */; };
 		43C993D81BE3B9C700CF90DD /* AttributedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C993D71BE3B9C700CF90DD /* AttributedTests.swift */; };
@@ -64,6 +66,7 @@
 		43C7523C1BEA610A00F928E5 /* NSParagraphStyle+Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSParagraphStyle+Attributes.swift"; sourceTree = "<group>"; };
 		43C7523F1BEA61B000F928E5 /* Ligature+Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Ligature+Attributes.swift"; sourceTree = "<group>"; };
 		43C752421BEA699300F928E5 /* NSNumberConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSNumberConvertible.swift; sourceTree = "<group>"; };
+		43C752451BEA6B1400F928E5 /* NSNumberConvertible+Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNumberConvertible+Attributes.swift"; sourceTree = "<group>"; };
 		43C993C81BE3B9C700CF90DD /* Attributed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Attributed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C993CB1BE3B9C700CF90DD /* Attributed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Attributed.h; sourceTree = "<group>"; };
 		43C993CD1BE3B9C700CF90DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -143,6 +146,7 @@
 				43C752301BEA525100F928E5 /* ColorType+Attributes.swift */,
 				43C752361BEA5F0A00F928E5 /* FontType+Attributes.swift */,
 				43C7523F1BEA61B000F928E5 /* Ligature+Attributes.swift */,
+				43C752451BEA6B1400F928E5 /* NSNumberConvertible+Attributes.swift */,
 				43C7523C1BEA610A00F928E5 /* NSParagraphStyle+Attributes.swift */,
 				43C752391BEA601900F928E5 /* NSTextAttachment+Attributes.swift */,
 			);
@@ -374,6 +378,7 @@
 				43C993E71BE3BB0B00CF90DD /* AttributedStringConvertible.swift in Sources */,
 				43C752371BEA5F0A00F928E5 /* FontType+Attributes.swift in Sources */,
 				43C7523A1BEA601900F928E5 /* NSTextAttachment+Attributes.swift in Sources */,
+				43C752461BEA6B1400F928E5 /* NSNumberConvertible+Attributes.swift in Sources */,
 				43C752431BEA699300F928E5 /* NSNumberConvertible.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -402,6 +407,7 @@
 				43C994121BE3DE8900CF90DD /* AttributeFunctions.swift in Sources */,
 				43C752381BEA5F0A00F928E5 /* FontType+Attributes.swift in Sources */,
 				43C7523B1BEA601900F928E5 /* NSTextAttachment+Attributes.swift in Sources */,
+				43C752471BEA6B1400F928E5 /* NSNumberConvertible+Attributes.swift in Sources */,
 				43C752441BEA699300F928E5 /* NSNumberConvertible.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

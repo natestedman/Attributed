@@ -39,29 +39,3 @@ public func BaselineOffset(offset: CGFloat, _ strings: [AttributedStringConverti
 {
     return Attribute(NSBaselineOffsetAttributeName, offset, strings)
 }
-
-/**
- Applies a kerning attribute to the enclosed attributed strings.
- 
- The kerning value will not override a kerning value set deeper in the hierarchy.
- 
- - parameter kerning: The kerning value.
- - parameter strings: The attributed strings to apply the font to.
- */
-public func Kern(kerning: CGFloat, _ strings: AttributedStringConvertible...) -> AttributedStringConvertible
-{
-    return Attribute(NSKernAttributeName, kerning, strings)
-}
-
-/**
- Applies a kerning attribute to the enclosed attributed strings.
- 
- The kerning value will not override a kerning value set deeper in the hierarchy.
- 
- - parameter kerning: The kerning value.
- - parameter strings: The attributed strings to apply the font to.
- */
-public func Kern(kerning: CGFloat, _ strings: [AttributedStringConvertible]) -> AttributedStringConvertible
-{
-    return Attribute(NSKernAttributeName, kerning, strings)
-}

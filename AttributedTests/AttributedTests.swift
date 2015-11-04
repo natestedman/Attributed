@@ -39,8 +39,7 @@ class AttributedTests: XCTestCase
     
     func testDeepNesting()
     {
-        let attributed = Kern(
-            10,
+        let attributed = 10.kernAttribute(
             "Test",
             ColorType.blueColor().foregroundAttribute(
                 "Test",

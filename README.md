@@ -13,8 +13,7 @@ label.attributedText = Join(
     "This is a string with ",
     UIColor.blueColor().foregroundAttribute(
         "blue ",
-        Kern(
-            100,
+        100.kernAttribute(
             "kerned"
         ),
         " text"
