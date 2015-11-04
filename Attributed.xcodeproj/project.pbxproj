@@ -24,7 +24,7 @@
 		43C993CC1BE3B9C700CF90DD /* Attributed.h in Headers */ = {isa = PBXBuildFile; fileRef = 43C993CB1BE3B9C700CF90DD /* Attributed.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		43C993D31BE3B9C700CF90DD /* Attributed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C993C81BE3B9C700CF90DD /* Attributed.framework */; };
 		43C993D81BE3B9C700CF90DD /* AttributedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C993D71BE3B9C700CF90DD /* AttributedTests.swift */; };
-		43C993E31BE3BAA100CF90DD /* GeneralFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C993E21BE3BAA100CF90DD /* GeneralFunctions.swift */; };
+		43C993E31BE3BAA100CF90DD /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C993E21BE3BAA100CF90DD /* Functions.swift */; };
 		43C993E51BE3BAD300CF90DD /* NestedAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C993E41BE3BAD300CF90DD /* NestedAttributedString.swift */; };
 		43C993E71BE3BB0B00CF90DD /* AttributedStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C993E61BE3BB0A00CF90DD /* AttributedStringConvertible.swift */; };
 		43C993E91BE3BDC000CF90DD /* PlatformTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C993E81BE3BDC000CF90DD /* PlatformTypes.swift */; };
@@ -33,7 +33,7 @@
 		43C994031BE3DDF900CF90DD /* Attributed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C993F91BE3DDF800CF90DD /* Attributed.framework */; };
 		43C994101BE3DE8900CF90DD /* Ligature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C993EC1BE3C2E800CF90DD /* Ligature.swift */; };
 		43C994111BE3DE8900CF90DD /* AttributedStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C993E61BE3BB0A00CF90DD /* AttributedStringConvertible.swift */; };
-		43C994131BE3DE8900CF90DD /* GeneralFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C993E21BE3BAA100CF90DD /* GeneralFunctions.swift */; };
+		43C994131BE3DE8900CF90DD /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C993E21BE3BAA100CF90DD /* Functions.swift */; };
 		43C994141BE3DE8900CF90DD /* NestedAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C993E41BE3BAD300CF90DD /* NestedAttributedString.swift */; };
 		43C994151BE3DE8900CF90DD /* PlatformTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C993E81BE3BDC000CF90DD /* PlatformTypes.swift */; };
 		43C994161BE3DE8E00CF90DD /* AttributedStringConvertibleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C993F01BE3C9CE00CF90DD /* AttributedStringConvertibleTests.swift */; };
@@ -71,7 +71,7 @@
 		43C993D21BE3B9C700CF90DD /* Attributed-OSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Attributed-OSXTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C993D71BE3B9C700CF90DD /* AttributedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedTests.swift; sourceTree = "<group>"; };
 		43C993D91BE3B9C700CF90DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		43C993E21BE3BAA100CF90DD /* GeneralFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralFunctions.swift; sourceTree = "<group>"; };
+		43C993E21BE3BAA100CF90DD /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		43C993E41BE3BAD300CF90DD /* NestedAttributedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NestedAttributedString.swift; sourceTree = "<group>"; };
 		43C993E61BE3BB0A00CF90DD /* AttributedStringConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedStringConvertible.swift; sourceTree = "<group>"; };
 		43C993E81BE3BDC000CF90DD /* PlatformTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatformTypes.swift; sourceTree = "<group>"; };
@@ -131,7 +131,7 @@
 		43C7522E1BEA51FE00F928E5 /* Functions */ = {
 			isa = PBXGroup;
 			children = (
-				43C993E21BE3BAA100CF90DD /* GeneralFunctions.swift */,
+				43C993E21BE3BAA100CF90DD /* Functions.swift */,
 			);
 			name = Functions;
 			sourceTree = "<group>";
@@ -367,7 +367,7 @@
 				43C752401BEA61B000F928E5 /* Ligature+Attributes.swift in Sources */,
 				43C993E51BE3BAD300CF90DD /* NestedAttributedString.swift in Sources */,
 				43C7523D1BEA610A00F928E5 /* NSParagraphStyle+Attributes.swift in Sources */,
-				43C993E31BE3BAA100CF90DD /* GeneralFunctions.swift in Sources */,
+				43C993E31BE3BAA100CF90DD /* Functions.swift in Sources */,
 				43C993ED1BE3C2E800CF90DD /* Ligature.swift in Sources */,
 				43C752311BEA525100F928E5 /* ColorType+Attributes.swift in Sources */,
 				43C993E71BE3BB0B00CF90DD /* AttributedStringConvertible.swift in Sources */,
@@ -391,7 +391,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43C994131BE3DE8900CF90DD /* GeneralFunctions.swift in Sources */,
+				43C994131BE3DE8900CF90DD /* Functions.swift in Sources */,
 				43C752411BEA61B000F928E5 /* Ligature+Attributes.swift in Sources */,
 				43C994111BE3DE8900CF90DD /* AttributedStringConvertible.swift in Sources */,
 				43C7523E1BEA610A00F928E5 /* NSParagraphStyle+Attributes.swift in Sources */,
