@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43C752311BEA525100F928E5 /* ColorType+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C752301BEA525100F928E5 /* ColorType+Attributes.swift */; };
+		43C752321BEA525100F928E5 /* ColorType+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C752301BEA525100F928E5 /* ColorType+Attributes.swift */; };
 		43C993CC1BE3B9C700CF90DD /* Attributed.h in Headers */ = {isa = PBXBuildFile; fileRef = 43C993CB1BE3B9C700CF90DD /* Attributed.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		43C993D31BE3B9C700CF90DD /* Attributed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C993C81BE3B9C700CF90DD /* Attributed.framework */; };
 		43C993D81BE3B9C700CF90DD /* AttributedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C993D71BE3B9C700CF90DD /* AttributedTests.swift */; };
@@ -46,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		43C752301BEA525100F928E5 /* ColorType+Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ColorType+Attributes.swift"; sourceTree = "<group>"; };
 		43C993C81BE3B9C700CF90DD /* Attributed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Attributed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C993CB1BE3B9C700CF90DD /* Attributed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Attributed.h; sourceTree = "<group>"; };
 		43C993CD1BE3B9C700CF90DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -117,6 +120,14 @@
 			name = Functions;
 			sourceTree = "<group>";
 		};
+		43C7522F1BEA524200F928E5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				43C752301BEA525100F928E5 /* ColorType+Attributes.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		43C993BE1BE3B9C700CF90DD = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				43C993CB1BE3B9C700CF90DD /* Attributed.h */,
+				43C7522F1BEA524200F928E5 /* Extensions */,
 				43C7522E1BEA51FE00F928E5 /* Functions */,
 				43C7522D1BEA51F900F928E5 /* Types */,
 				43C993CD1BE3B9C700CF90DD /* Info.plist */,
@@ -336,6 +348,7 @@
 				43C993E31BE3BAA100CF90DD /* GeneralFunctions.swift in Sources */,
 				43C993EB1BE3C1D300CF90DD /* AttributeFunctions.swift in Sources */,
 				43C993ED1BE3C2E800CF90DD /* AttributedLigature.swift in Sources */,
+				43C752311BEA525100F928E5 /* ColorType+Attributes.swift in Sources */,
 				43C993E71BE3BB0B00CF90DD /* AttributedStringConvertible.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +371,7 @@
 				43C994101BE3DE8900CF90DD /* AttributedLigature.swift in Sources */,
 				43C994141BE3DE8900CF90DD /* NestedAttributedString.swift in Sources */,
 				43C994151BE3DE8900CF90DD /* PlatformTypes.swift in Sources */,
+				43C752321BEA525100F928E5 /* ColorType+Attributes.swift in Sources */,
 				43C994121BE3DE8900CF90DD /* AttributeFunctions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
