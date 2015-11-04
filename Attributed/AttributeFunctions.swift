@@ -173,34 +173,6 @@ public func Kern(kerning: CGFloat, _ strings: [AttributedStringConvertible]) -> 
 }
 
 /**
- Applies a ligature setting to the enclosed attributed strings.
- 
- The ligature setting will not override a ligature setting set deeper in the hierarchy.
- 
- - parameter ligature: The ligature setting.
- - parameter strings:  The attributed strings to apply the ligature setting to.
- */
-public func Ligature(ligature: AttributedLigature, _ strings: AttributedStringConvertible...)
-    -> AttributedStringConvertible
-{
-    return Attribute(NSLigatureAttributeName, ligature.rawValue, strings)
-}
-
-/**
- Applies a ligature setting to the enclosed attributed strings.
- 
- The ligature setting will not override a ligature setting set deeper in the hierarchy.
- 
- - parameter ligature: The ligature setting.
- - parameter strings:  The attributed strings to apply the ligature setting to.
- */
-public func Ligature(ligature: AttributedLigature, _ strings: [AttributedStringConvertible])
-    -> AttributedStringConvertible
-{
-    return Attribute(NSLigatureAttributeName, ligature.rawValue, strings)
-}
-
-/**
  Applies a paragraph style to the enclosed attributed strings.
  
  The paragraph style will not override a paragraph style set deeper n the hierarchy.

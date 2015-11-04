@@ -8,6 +8,12 @@
 // You should have received a copy of the CC0 Public Domain Dedication along with
 // this software. If not, see <http://creativecommons.org/publicdomain/zero/1.0/>.
 
+#if os(iOS)
+    import UIKit
+#else
+    import AppKit
+#endif
+
 public extension AttributedLigature
 {
     /**
@@ -19,7 +25,7 @@ public extension AttributedLigature
      */
     public func attribute(strings: AttributedStringConvertible...) -> AttributedStringConvertible
     {
-        return Ligature(self, strings)
+        return Attribute(NSLigatureAttributeName, self.rawValue, strings)
     }
     
     /**
@@ -31,6 +37,6 @@ public extension AttributedLigature
      */
     public func attribute(strings: [AttributedStringConvertible]) -> AttributedStringConvertible
     {
-        return Ligature(self, strings)
+        return Attribute(NSLigatureAttributeName, self.rawValue, strings)
     }
 }
