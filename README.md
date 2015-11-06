@@ -47,10 +47,16 @@ UIColor.greenColor().foregroundAttribute(
 ### Attributes
 The provided attribute functions take the value of the attribute as the first value, and a variadic number of `AttributedStringConvertible` values afterwards. For composition in other functions, versions with a single `[AttributedStringConvertible]` parameter are also provided for all functions.
 
-#### Framework Types
-The framework types extended with attribute functions are:
+#### Colors
+`NSColor` and `UIColor` are extended with these attribute functions:
 
-- `NSColor`/`UIColor`: `foregroundAttribute`, which maps to `NSForegroundColorAttributeName`; `backgroundAttribute`, which maps to `NSBackgroundColorAttributeName`; and `underlineAttribute`, which maps to `NSUnderlineColorAttributeName`.
+- `foregroundAttribute`, which maps to `NSForegroundColorAttributeName`.
+- `backgroundAttribute`, which maps to `NSBackgroundColorAttributeName`.
+- `underlineAttribute`, which maps to `NSUnderlineColorAttributeName`.
+
+#### Other Framework Types
+These additional framework types are extended with attribute functions:
+
 - `NSFont`/`UIFont`: `attribute`, which maps to `NSFontAttributeName`.
 - `NSTextAttachment`: `attribute`, which maps to `NSAttachmentAttributeName`.
 - `NSParagraphStyle`: `attribute`, which maps to `NSParagraphStyleAttributeName`.
