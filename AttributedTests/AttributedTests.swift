@@ -76,4 +76,17 @@ class AttributedTests: XCTestCase
         
         XCTAssertEqual(attributed, mutable)
     }
+    
+    func testJoin()
+    {
+        let attributed = [
+            "Test",
+            NSAttributedString(string: "Test", attributes: [NSForegroundColorAttributeName: ColorType.redColor()])
+        ].join().attributedString
+        
+        let mutable = NSMutableAttributedString(string: "TestTest")
+        mutable.addAttribute(NSForegroundColorAttributeName, value: ColorType.redColor(), range: NSMakeRange(4, 4))
+        
+        XCTAssertEqual(attributed, mutable)
+    }
 }

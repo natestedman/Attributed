@@ -9,7 +9,7 @@ A Swift DSL for `NSAttributedString`.
 Attributed strings are composed through function calls on extensions of attribute value types, where the parameter is a list of attributed string values to apply the attributes to. The return values of these function calls can be included within lists passed to other function calls, creating a nested structure.
 
 ```swift
-label.attributedText = Join(
+label.attributedText = [
     "This is a string with ",
     UIColor.blueColor().foregroundAttribute(
         "blue ",
@@ -24,10 +24,10 @@ label.attributedText = Join(
         " text"
     ),
     "."
-).attributedString
+].join().attributedString
 ```
 
-The `Join` function can be used to combine attributed strings without applying any additional attributes.
+The `join` extension of `SequenceType` can be used to combine attributed strings without applying any additional attributes.
 
 Any value that conforms to the `AttributedStringConvertible` protocol can be passed as an argument. Implementations for `NSAttributedString` and `String` are included, so it shouldn't be necessary to implement this type. All attribute functions return a value of this protocol type. It can be unwrapped into a `NSAttributedString` with the `attributedString` property.
 

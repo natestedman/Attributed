@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		433A9C0E1BECF169009A3919 /* SequenceType+Join.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433A9C0D1BECF169009A3919 /* SequenceType+Join.swift */; };
+		433A9C0F1BECF169009A3919 /* SequenceType+Join.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433A9C0D1BECF169009A3919 /* SequenceType+Join.swift */; };
 		434DBBC81BEC39FA00C11F09 /* NSUnderlineStyle+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434DBBC71BEC39FA00C11F09 /* NSUnderlineStyle+Attributes.swift */; };
 		434DBBCA1BEC3AD000C11F09 /* NSShadow+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434DBBC91BEC3AD000C11F09 /* NSShadow+Attributes.swift */; };
 		434DBBCB1BEC3AD000C11F09 /* NSShadow+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434DBBC91BEC3AD000C11F09 /* NSShadow+Attributes.swift */; };
@@ -62,6 +64,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		433A9C0D1BECF169009A3919 /* SequenceType+Join.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SequenceType+Join.swift"; sourceTree = "<group>"; };
 		434DBBC71BEC39FA00C11F09 /* NSUnderlineStyle+Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSUnderlineStyle+Attributes.swift"; sourceTree = "<group>"; };
 		434DBBC91BEC3AD000C11F09 /* NSShadow+Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSShadow+Attributes.swift"; sourceTree = "<group>"; };
 		43C752301BEA525100F928E5 /* ColorType+Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ColorType+Attributes.swift"; sourceTree = "<group>"; };
@@ -153,6 +156,7 @@
 				434DBBC91BEC3AD000C11F09 /* NSShadow+Attributes.swift */,
 				43C752391BEA601900F928E5 /* NSTextAttachment+Attributes.swift */,
 				434DBBC71BEC39FA00C11F09 /* NSUnderlineStyle+Attributes.swift */,
+				433A9C0D1BECF169009A3919 /* SequenceType+Join.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -371,6 +375,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				433A9C0E1BECF169009A3919 /* SequenceType+Join.swift in Sources */,
 				43C993E91BE3BDC000CF90DD /* PlatformTypes.swift in Sources */,
 				434DBBCA1BEC3AD000C11F09 /* NSShadow+Attributes.swift in Sources */,
 				43C752401BEA61B000F928E5 /* Ligature+Attributes.swift in Sources */,
@@ -401,6 +406,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				433A9C0F1BECF169009A3919 /* SequenceType+Join.swift in Sources */,
 				434DBBCC1BEC3AD400C11F09 /* NSUnderlineStyle+Attributes.swift in Sources */,
 				43C994131BE3DE8900CF90DD /* Functions.swift in Sources */,
 				43C752411BEA61B000F928E5 /* Ligature+Attributes.swift in Sources */,

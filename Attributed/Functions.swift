@@ -9,26 +9,6 @@
 // this software. If not, see <http://creativecommons.org/publicdomain/zero/1.0/>.
 
 /**
- Joins multiple `AttributedStringConvertible` values into one.
-
- - parameter strings: The convertibles to join.
-*/
-public func Join(strings: AttributedStringConvertible...) -> AttributedStringConvertible
-{
-    return NestedAttributedString(attributes: [:], children: strings)
-}
-
-/**
- Joins multiple `AttributedStringConvertible` values into one.
- 
- - parameter strings: The convertibles to join.
- */
-public func Join(strings: [AttributedStringConvertible]) -> AttributedStringConvertible
-{
-    return NestedAttributedString(attributes: [:], children: strings)
-}
-
-/**
  Returns an attributed string convertible with the specified attributes applied at the root level.
  
  The attributes will not override matching attributes deeper in the hierarchy.
