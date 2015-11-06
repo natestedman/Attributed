@@ -59,4 +59,21 @@ class AttributedTests: XCTestCase
         
         XCTAssertEqual(attributed, mutable)
     }
+    
+    func testNilValue()
+    {
+        let attributed = ColorType.blueColor().foregroundAttribute(
+            "Test",
+            Attribute(NSForegroundColorAttributeName, nil,
+                "Test",
+                ColorType.greenColor().foregroundAttribute("Test")
+            )
+        ).attributedString
+        
+        let mutable = NSMutableAttributedString(string: "TestTestTest")
+        mutable.addAttribute(NSForegroundColorAttributeName, value: ColorType.blueColor(), range: NSMakeRange(0, 4))
+        mutable.addAttribute(NSForegroundColorAttributeName, value: ColorType.greenColor(), range: NSMakeRange(8, 4))
+        
+        XCTAssertEqual(attributed, mutable)
+    }
 }

@@ -36,7 +36,7 @@ public func Join(strings: [AttributedStringConvertible]) -> AttributedStringConv
  - parameter attributes: The attributes to apply.
  - parameter strings:    The convertible strings.
  */
-public func Attributes(attributes: [String:AnyObject], _ strings: AttributedStringConvertible...)
+public func Attributes(attributes: [String:AnyObject?], _ strings: AttributedStringConvertible...)
     -> AttributedStringConvertible
 {
     return Attributes(attributes, strings)
@@ -50,7 +50,7 @@ public func Attributes(attributes: [String:AnyObject], _ strings: AttributedStri
  - parameter attributes: The attributes to apply.
  - parameter strings:    The convertible strings.
  */
-public func Attributes(attributes: [String:AnyObject], _ strings: [AttributedStringConvertible])
+public func Attributes(attributes: [String:AnyObject?], _ strings: [AttributedStringConvertible])
     -> AttributedStringConvertible
 {
     return NestedAttributedString(attributes: attributes, children: strings)
@@ -65,7 +65,7 @@ public func Attributes(attributes: [String:AnyObject], _ strings: [AttributedStr
  - parameter value:     The attribute value to apply.
  - parameter strings:   The convertible strings.
  */
-public func Attribute(attribute: String, _ value: AnyObject, _ strings: AttributedStringConvertible...)
+public func Attribute(attribute: String, _ value: AnyObject?, _ strings: AttributedStringConvertible...)
     -> AttributedStringConvertible
 {
     return Attribute(attribute, value, strings)
@@ -80,7 +80,7 @@ public func Attribute(attribute: String, _ value: AnyObject, _ strings: Attribut
  - parameter value:     The attribute value to apply.
  - parameter strings:   The convertible strings.
  */
-public func Attribute(attribute: String, _ value: AnyObject, _ strings: [AttributedStringConvertible])
+public func Attribute(attribute: String, _ value: AnyObject?, _ strings: [AttributedStringConvertible])
     -> AttributedStringConvertible
 {
     return Attributes([attribute: value], strings)

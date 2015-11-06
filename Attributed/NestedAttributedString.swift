@@ -14,7 +14,7 @@ import Foundation
 internal struct NestedAttributedString
 {
     /// The attributes to apply over this string's children.
-    let attributes: [String:AnyObject]
+    let attributes: [String:AnyObject?]
     
     /// The children of this attributed string.
     let children: [AttributedStringConvertible]
