@@ -39,4 +39,28 @@ public extension NSUnderlineStyle
     {
         return Attribute(NSUnderlineStyleAttributeName, self.rawValue, strings)
     }
+    
+    /**
+     Applies a strikethrough style attribute to the enclosed attributed strings.
+     
+     The strikethrough style will not override a strikethrough style set deeper in the hierarchy.
+     
+     - parameter strings: The attributed strings to apply the strikethrough style to.
+     */
+    public func strikethroughAttribute(strings: AttributedStringConvertible...) -> AttributedStringConvertible
+    {
+        return Attribute(NSStrikethroughStyleAttributeName, self.rawValue, strings)
+    }
+    
+    /**
+     Applies a strikethrough style attribute to the enclosed attributed strings.
+     
+     The strikethrough style will not override a strikethrough style set deeper in the hierarchy.
+     
+     - parameter strings: The attributed strings to apply the strikethrough style to.
+     */
+    public func strikethroughAttribute(strings: [AttributedStringConvertible]) -> AttributedStringConvertible
+    {
+        return Attribute(NSStrikethroughStyleAttributeName, self.rawValue, strings)
+    }
 }

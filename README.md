@@ -53,6 +53,7 @@ The provided attribute functions take the value of the attribute as the first va
 - `foregroundAttribute`, which maps to `NSForegroundColorAttributeName`.
 - `backgroundAttribute`, which maps to `NSBackgroundColorAttributeName`.
 - `underlineAttribute`, which maps to `NSUnderlineColorAttributeName`.
+- `strikethroughAttribute`, which maps to `NSStrikethroughColorAttributeName`.
 
 #### Other Framework Types
 These additional framework types are extended with attribute functions:
@@ -61,7 +62,7 @@ These additional framework types are extended with attribute functions:
 - `NSTextAttachment`: `attribute`, which maps to `NSAttachmentAttributeName`.
 - `NSParagraphStyle`: `attribute`, which maps to `NSParagraphStyleAttributeName`.
 - `NSShadow`: `attribute`, which maps to `NSShadowAttributeName`.
-- `NSUnderlineStyle`: `attribute`, which maps to `NSUnderlineStyleAttributeName`.
+- `NSUnderlineStyle`: `attribute`, which maps to `NSUnderlineStyleAttributeName`; and `strikethroughAttribute`, which makes to `NSStrikethroughStyleAttributeName`.
 
 #### Numeric Types
 Attributes with numeric values use the `NSNumberConvertible` protocol. The framework provides implementations for these types:

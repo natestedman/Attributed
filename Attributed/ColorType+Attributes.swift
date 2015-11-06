@@ -87,4 +87,28 @@ public extension ColorType
     {
         return Attribute(NSUnderlineColorAttributeName, self, strings)
     }
+    
+    /**
+     Applies an strikethrough color attribute to the enclosed attributed strings.
+     
+     The strikethrough color will not override an strikethrough color set deeper in the hierarchy.
+     
+     - parameter strings: The attributed strings to apply the strikethrough color to.
+     */
+    public func strikethroughAttribute(strings: AttributedStringConvertible...) -> AttributedStringConvertible
+    {
+        return Attribute(NSStrikethroughColorAttributeName, self, strings)
+    }
+    
+    /**
+     Applies an strikethrough color attribute to the enclosed attributed strings.
+     
+     The strikethrough color will not override an strikethrough color set deeper in the hierarchy.
+     
+     - parameter strings: The attributed strings to apply the strikethrough color to.
+     */
+    public func strikethroughAttribute(strings: [AttributedStringConvertible]) -> AttributedStringConvertible
+    {
+        return Attribute(NSStrikethroughColorAttributeName, self, strings)
+    }
 }
