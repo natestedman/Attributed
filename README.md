@@ -97,12 +97,12 @@ To enforce valid values for the ligature attribute, the `Ligature` type is decla
 The `Ligature` enumeration is extended with the `attribute` function, which maps to `NSLigatureAttributeName`.
 
 #### Custom Attributes
-Custom attributes can be added with the `Attribute` and `Attributes` functions.
+Custom attributes can be added with the `attribute` and `attributes` functions.
 
 ```swift
 UIColor.blueColor().foregroundColor(
     "This is a blue string with a ",
-    Attributes(
+    attributes(
         ["Custom": "Value"],
         "custom attribute included"
     ),

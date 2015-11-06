@@ -25,7 +25,7 @@ public extension ColorType
      */
     public func foregroundAttribute(strings: AttributedStringConvertible...) -> AttributedStringConvertible
     {
-        return Attribute(NSForegroundColorAttributeName, self, strings)
+        return Attributed.attribute(NSForegroundColorAttributeName, self, strings)
     }
     
     /**
@@ -37,7 +37,7 @@ public extension ColorType
      */
     public func foregroundAttribute(strings: [AttributedStringConvertible]) -> AttributedStringConvertible
     {
-        return Attribute(NSForegroundColorAttributeName, self, strings)
+        return Attributed.attribute(NSForegroundColorAttributeName, self, strings)
     }
     
     /**
@@ -49,7 +49,7 @@ public extension ColorType
      */
     public func backgroundAttribute(strings: AttributedStringConvertible...) -> AttributedStringConvertible
     {
-        return Attribute(NSBackgroundColorAttributeName, self, strings)
+        return Attributed.attribute(NSBackgroundColorAttributeName, self, strings)
     }
     
     /**
@@ -61,7 +61,7 @@ public extension ColorType
      */
     public func backgroundAttribute(strings: [AttributedStringConvertible]) -> AttributedStringConvertible
     {
-        return Attribute(NSBackgroundColorAttributeName, self, strings)
+        return Attributed.attribute(NSBackgroundColorAttributeName, self, strings)
     }
     
     /**
@@ -73,7 +73,7 @@ public extension ColorType
      */
     public func underlineAttribute(strings: AttributedStringConvertible...) -> AttributedStringConvertible
     {
-        return Attribute(NSUnderlineColorAttributeName, self, strings)
+        return Attributed.attribute(NSUnderlineColorAttributeName, self, strings)
     }
     
     /**
@@ -85,7 +85,7 @@ public extension ColorType
      */
     public func underlineAttribute(strings: [AttributedStringConvertible]) -> AttributedStringConvertible
     {
-        return Attribute(NSUnderlineColorAttributeName, self, strings)
+        return Attributed.attribute(NSUnderlineColorAttributeName, self, strings)
     }
     
     /**
@@ -97,7 +97,7 @@ public extension ColorType
      */
     public func strikethroughAttribute(strings: AttributedStringConvertible...) -> AttributedStringConvertible
     {
-        return Attribute(NSStrikethroughColorAttributeName, self, strings)
+        return Attributed.attribute(NSStrikethroughColorAttributeName, self, strings)
     }
     
     /**
@@ -109,6 +109,6 @@ public extension ColorType
      */
     public func strikethroughAttribute(strings: [AttributedStringConvertible]) -> AttributedStringConvertible
     {
-        return Attribute(NSStrikethroughColorAttributeName, self, strings)
+        return Attributed.attribute(NSStrikethroughColorAttributeName, self, strings)
     }
 }

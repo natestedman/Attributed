@@ -25,7 +25,7 @@ public extension FontType
      */
     public func attribute(strings: AttributedStringConvertible...) -> AttributedStringConvertible
     {
-        return Attribute(NSFontAttributeName, self, strings)
+        return Attributed.attribute(NSFontAttributeName, self, strings)
     }
     
     /**
@@ -37,6 +37,6 @@ public extension FontType
      */
     public func attribute(strings: [AttributedStringConvertible]) -> AttributedStringConvertible
     {
-        return Attribute(NSFontAttributeName, self, strings)
+        return Attributed.attribute(NSFontAttributeName, self, strings)
     }
 }

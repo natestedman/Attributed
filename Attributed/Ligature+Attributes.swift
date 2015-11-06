@@ -25,7 +25,7 @@ public extension Ligature
      */
     public func attribute(strings: AttributedStringConvertible...) -> AttributedStringConvertible
     {
-        return Attribute(NSLigatureAttributeName, self.rawValue, strings)
+        return Attributed.attribute(NSLigatureAttributeName, self.rawValue, strings)
     }
     
     /**
@@ -37,6 +37,6 @@ public extension Ligature
      */
     public func attribute(strings: [AttributedStringConvertible]) -> AttributedStringConvertible
     {
-        return Attribute(NSLigatureAttributeName, self.rawValue, strings)
+        return Attributed.attribute(NSLigatureAttributeName, self.rawValue, strings)
     }
 }
