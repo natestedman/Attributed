@@ -54,6 +54,7 @@ The framework types extended with attribute functions are:
 - `NSFont`/`UIFont`: `attribute`, which maps to `NSFontAttributeName`.
 - `NSTextAttachment`: `attribute`, which maps to `NSAttachmentAttributeName`.
 - `NSParagraphStyle`: `attribute`, which maps to `NSParagraphStyleAttributeName`.
+- `NSUnderlineStyle`: `attribute`, which maps to `NSUnderlineStyleAttributeName`.
 
 #### Numeric Types
 Attributes with numeric values use the `NSNumberConvertible` protocol. The framework provides implementations for these types:

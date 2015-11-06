@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		434DBBC81BEC39FA00C11F09 /* NSUnderlineStyle+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434DBBC71BEC39FA00C11F09 /* NSUnderlineStyle+Attributes.swift */; };
 		43C752311BEA525100F928E5 /* ColorType+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C752301BEA525100F928E5 /* ColorType+Attributes.swift */; };
 		43C752321BEA525100F928E5 /* ColorType+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C752301BEA525100F928E5 /* ColorType+Attributes.swift */; };
 		43C752371BEA5F0A00F928E5 /* FontType+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C752361BEA5F0A00F928E5 /* FontType+Attributes.swift */; };
@@ -58,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		434DBBC71BEC39FA00C11F09 /* NSUnderlineStyle+Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSUnderlineStyle+Attributes.swift"; sourceTree = "<group>"; };
 		43C752301BEA525100F928E5 /* ColorType+Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ColorType+Attributes.swift"; sourceTree = "<group>"; };
 		43C752361BEA5F0A00F928E5 /* FontType+Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FontType+Attributes.swift"; sourceTree = "<group>"; };
 		43C752391BEA601900F928E5 /* NSTextAttachment+Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTextAttachment+Attributes.swift"; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				43C752451BEA6B1400F928E5 /* NSNumberConvertible+Attributes.swift */,
 				43C7523C1BEA610A00F928E5 /* NSParagraphStyle+Attributes.swift */,
 				43C752391BEA601900F928E5 /* NSTextAttachment+Attributes.swift */,
+				434DBBC71BEC39FA00C11F09 /* NSUnderlineStyle+Attributes.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				43C993E91BE3BDC000CF90DD /* PlatformTypes.swift in Sources */,
 				43C752401BEA61B000F928E5 /* Ligature+Attributes.swift in Sources */,
 				43C993E51BE3BAD300CF90DD /* NestedAttributedString.swift in Sources */,
+				434DBBC81BEC39FA00C11F09 /* NSUnderlineStyle+Attributes.swift in Sources */,
 				43C7523D1BEA610A00F928E5 /* NSParagraphStyle+Attributes.swift in Sources */,
 				43C993E31BE3BAA100CF90DD /* Functions.swift in Sources */,
 				43C993ED1BE3C2E800CF90DD /* Ligature.swift in Sources */,
