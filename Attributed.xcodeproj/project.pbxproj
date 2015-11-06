@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		434DBBC81BEC39FA00C11F09 /* NSUnderlineStyle+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434DBBC71BEC39FA00C11F09 /* NSUnderlineStyle+Attributes.swift */; };
+		434DBBCA1BEC3AD000C11F09 /* NSShadow+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434DBBC91BEC3AD000C11F09 /* NSShadow+Attributes.swift */; };
+		434DBBCB1BEC3AD000C11F09 /* NSShadow+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434DBBC91BEC3AD000C11F09 /* NSShadow+Attributes.swift */; };
 		434DBBCC1BEC3AD400C11F09 /* NSUnderlineStyle+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434DBBC71BEC39FA00C11F09 /* NSUnderlineStyle+Attributes.swift */; };
 		43C752311BEA525100F928E5 /* ColorType+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C752301BEA525100F928E5 /* ColorType+Attributes.swift */; };
 		43C752321BEA525100F928E5 /* ColorType+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C752301BEA525100F928E5 /* ColorType+Attributes.swift */; };
@@ -61,6 +63,7 @@
 
 /* Begin PBXFileReference section */
 		434DBBC71BEC39FA00C11F09 /* NSUnderlineStyle+Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSUnderlineStyle+Attributes.swift"; sourceTree = "<group>"; };
+		434DBBC91BEC3AD000C11F09 /* NSShadow+Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSShadow+Attributes.swift"; sourceTree = "<group>"; };
 		43C752301BEA525100F928E5 /* ColorType+Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ColorType+Attributes.swift"; sourceTree = "<group>"; };
 		43C752361BEA5F0A00F928E5 /* FontType+Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FontType+Attributes.swift"; sourceTree = "<group>"; };
 		43C752391BEA601900F928E5 /* NSTextAttachment+Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTextAttachment+Attributes.swift"; sourceTree = "<group>"; };
@@ -147,6 +150,7 @@
 				43C7523F1BEA61B000F928E5 /* Ligature+Attributes.swift */,
 				43C752451BEA6B1400F928E5 /* NSNumberConvertible+Attributes.swift */,
 				43C7523C1BEA610A00F928E5 /* NSParagraphStyle+Attributes.swift */,
+				434DBBC91BEC3AD000C11F09 /* NSShadow+Attributes.swift */,
 				43C752391BEA601900F928E5 /* NSTextAttachment+Attributes.swift */,
 				434DBBC71BEC39FA00C11F09 /* NSUnderlineStyle+Attributes.swift */,
 			);
@@ -368,6 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43C993E91BE3BDC000CF90DD /* PlatformTypes.swift in Sources */,
+				434DBBCA1BEC3AD000C11F09 /* NSShadow+Attributes.swift in Sources */,
 				43C752401BEA61B000F928E5 /* Ligature+Attributes.swift in Sources */,
 				43C993E51BE3BAD300CF90DD /* NestedAttributedString.swift in Sources */,
 				434DBBC81BEC39FA00C11F09 /* NSUnderlineStyle+Attributes.swift in Sources */,
@@ -402,6 +407,7 @@
 				43C994111BE3DE8900CF90DD /* AttributedStringConvertible.swift in Sources */,
 				43C7523E1BEA610A00F928E5 /* NSParagraphStyle+Attributes.swift in Sources */,
 				43C994101BE3DE8900CF90DD /* Ligature.swift in Sources */,
+				434DBBCB1BEC3AD000C11F09 /* NSShadow+Attributes.swift in Sources */,
 				43C994141BE3DE8900CF90DD /* NestedAttributedString.swift in Sources */,
 				43C994151BE3DE8900CF90DD /* PlatformTypes.swift in Sources */,
 				43C752321BEA525100F928E5 /* ColorType+Attributes.swift in Sources */,
