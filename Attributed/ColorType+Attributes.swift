@@ -63,4 +63,28 @@ public extension ColorType
     {
         return Attribute(NSBackgroundColorAttributeName, self, strings)
     }
+    
+    /**
+     Applies an underline color attribute to the enclosed attributed strings.
+     
+     The underline color will not override an underline color set deeper in the hierarchy.
+     
+     - parameter strings: The attributed strings to apply the underline color to.
+     */
+    public func underlineAttribute(strings: AttributedStringConvertible...) -> AttributedStringConvertible
+    {
+        return Attribute(NSUnderlineColorAttributeName, self, strings)
+    }
+    
+    /**
+     Applies an underline color attribute to the enclosed attributed strings.
+     
+     The underline color will not override an underline color set deeper in the hierarchy.
+     
+     - parameter strings: The attributed strings to apply the underline color to.
+     */
+    public func underlineAttribute(strings: [AttributedStringConvertible]) -> AttributedStringConvertible
+    {
+        return Attribute(NSUnderlineColorAttributeName, self, strings)
+    }
 }
