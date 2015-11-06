@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		434DBBC81BEC39FA00C11F09 /* NSUnderlineStyle+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434DBBC71BEC39FA00C11F09 /* NSUnderlineStyle+Attributes.swift */; };
+		434DBBCC1BEC3AD400C11F09 /* NSUnderlineStyle+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434DBBC71BEC39FA00C11F09 /* NSUnderlineStyle+Attributes.swift */; };
 		43C752311BEA525100F928E5 /* ColorType+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C752301BEA525100F928E5 /* ColorType+Attributes.swift */; };
 		43C752321BEA525100F928E5 /* ColorType+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C752301BEA525100F928E5 /* ColorType+Attributes.swift */; };
 		43C752371BEA5F0A00F928E5 /* FontType+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C752361BEA5F0A00F928E5 /* FontType+Attributes.swift */; };
@@ -395,6 +396,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				434DBBCC1BEC3AD400C11F09 /* NSUnderlineStyle+Attributes.swift in Sources */,
 				43C994131BE3DE8900CF90DD /* Functions.swift in Sources */,
 				43C752411BEA61B000F928E5 /* Ligature+Attributes.swift in Sources */,
 				43C994111BE3DE8900CF90DD /* AttributedStringConvertible.swift in Sources */,
