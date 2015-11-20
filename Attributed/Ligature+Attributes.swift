@@ -16,6 +16,8 @@
 
 public extension Ligature
 {
+    // MARK: - Attributes
+    
     /**
      Applies a ligature setting to the enclosed attributed strings.
      
