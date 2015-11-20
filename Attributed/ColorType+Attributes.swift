@@ -16,6 +16,8 @@
 
 public extension ColorType
 {
+    // MARK: - Foreground Color
+    
     /**
      Applies a foreground color attribute to the enclosed attributed strings.
      
@@ -39,6 +41,8 @@ public extension ColorType
     {
         return Attributed.attribute(NSForegroundColorAttributeName, self, strings)
     }
+    
+    // MARK: - Background Color
     
     /**
      Applies a background color attribute to the enclosed attributed strings.
@@ -64,6 +68,8 @@ public extension ColorType
         return Attributed.attribute(NSBackgroundColorAttributeName, self, strings)
     }
     
+    // MARK: - Underline Color
+    
     /**
      Applies an underline color attribute to the enclosed attributed strings.
      
@@ -87,6 +93,8 @@ public extension ColorType
     {
         return Attributed.attribute(NSUnderlineColorAttributeName, self, strings)
     }
+    
+    // MARK: - Strikethrough Color
     
     /**
      Applies an strikethrough color attribute to the enclosed attributed strings.
