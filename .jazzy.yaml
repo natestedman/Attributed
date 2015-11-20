@@ -1,0 +1,40 @@
+custom_categories:
+    - name: Attributed String Convertible
+      children:
+          - AttributedStringConvertible
+          - NSAttributedString
+          - String
+          
+    - name: Attribute Functions
+      children:
+        - attribute(_:_:_:)
+        - attributes(_:_:)
+    
+    - name: Attribute Extensions
+      children:
+        - ColorType
+        - FontType
+        - Ligature
+        - NSCursor
+        - NSNumberConvertible
+        - NSParagraphStyle
+        - NSShadow
+        - NSTextAttachment
+        - NSUnderlineStyle
+    
+    - name: Number Convertibles
+      children:
+          - CGFloat
+          - Double
+          - Float
+          - Int
+          - Int8
+          - Int16
+          - Int32
+          - Int64
+          - NSNumber
+          - UInt
+          - UInt8
+          - UInt16
+          - UInt32
+          - UInt64
