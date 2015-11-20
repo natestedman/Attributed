@@ -18,7 +18,7 @@ public enum Ligature: Int
     case Default = 1
     
     #if os(OSX)
-    /// All ligatures will be used.
+    /// All ligatures will be used. This case is only available on OS X.
     case All = 2
     #endif
 }
