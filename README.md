@@ -58,6 +58,7 @@ The provided attribute functions take the value of the attribute as the first va
 #### Other Framework Types
 These additional framework types are extended with attribute functions:
 
+- `NSCursor`, on OS X only: `attributes`, which maps to `NSCursorAttributeName`.
 - `NSFont`/`UIFont`: `attribute`, which maps to `NSFontAttributeName`.
 - `NSTextAttachment`: `attribute`, which maps to `NSAttachmentAttributeName`.
 - `NSParagraphStyle`: `attribute`, which maps to `NSParagraphStyleAttributeName`.

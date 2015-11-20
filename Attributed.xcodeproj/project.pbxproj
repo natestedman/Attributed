@@ -44,6 +44,7 @@
 		43C994151BE3DE8900CF90DD /* PlatformTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C993E81BE3BDC000CF90DD /* PlatformTypes.swift */; };
 		43C994161BE3DE8E00CF90DD /* AttributedStringConvertibleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C993F01BE3C9CE00CF90DD /* AttributedStringConvertibleTests.swift */; };
 		43CDB1E41BE3FE6800440B11 /* AttributedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C993D71BE3B9C700CF90DD /* AttributedTests.swift */; };
+		43D5EA131BFF5FE200E48BD6 /* NSCursor+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5EA121BFF5FE200E48BD6 /* NSCursor+Attributes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		43C993F01BE3C9CE00CF90DD /* AttributedStringConvertibleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedStringConvertibleTests.swift; sourceTree = "<group>"; };
 		43C993F91BE3DDF800CF90DD /* Attributed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Attributed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C994021BE3DDF900CF90DD /* Attributed-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Attributed-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		43D5EA121BFF5FE200E48BD6 /* NSCursor+Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSCursor+Attributes.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 				43C752301BEA525100F928E5 /* ColorType+Attributes.swift */,
 				43C752361BEA5F0A00F928E5 /* FontType+Attributes.swift */,
 				43C7523F1BEA61B000F928E5 /* Ligature+Attributes.swift */,
+				43D5EA121BFF5FE200E48BD6 /* NSCursor+Attributes.swift */,
 				43C752451BEA6B1400F928E5 /* NSNumberConvertible+Attributes.swift */,
 				43C7523C1BEA610A00F928E5 /* NSParagraphStyle+Attributes.swift */,
 				434DBBC91BEC3AD000C11F09 /* NSShadow+Attributes.swift */,
@@ -380,6 +383,7 @@
 				434DBBCA1BEC3AD000C11F09 /* NSShadow+Attributes.swift in Sources */,
 				43C752401BEA61B000F928E5 /* Ligature+Attributes.swift in Sources */,
 				43C993E51BE3BAD300CF90DD /* NestedAttributedString.swift in Sources */,
+				43D5EA131BFF5FE200E48BD6 /* NSCursor+Attributes.swift in Sources */,
 				434DBBC81BEC39FA00C11F09 /* NSUnderlineStyle+Attributes.swift in Sources */,
 				43C7523D1BEA610A00F928E5 /* NSParagraphStyle+Attributes.swift in Sources */,
 				43C993E31BE3BAA100CF90DD /* Functions.swift in Sources */,
