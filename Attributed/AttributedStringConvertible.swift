@@ -27,13 +27,17 @@ public protocol AttributedStringConvertible
 }
 
 // MARK: - String
+
+/// Swift's `String` is extended to conform to `AttributedStringConvertible`.
 extension String: AttributedStringConvertible
 {
+    /// Required to conform to `AttributedStringConvertible`.
     public var attributedString: NSAttributedString
     {
         return NSAttributedString(string: self)
     }
     
+    /// Required to conform to `AttributedStringConvertible`.
     public func attributedStringWithAddedAttributes(attributes: [String : AnyObject]) -> NSAttributedString
     {
         return NSAttributedString(string: self, attributes: attributes)
@@ -41,13 +45,17 @@ extension String: AttributedStringConvertible
 }
 
 // MARK: - NSAttributedString
+
+/// Foundation's `NSAttributedString` is extended to conform to `AttributedStringConvertible`.
 extension NSAttributedString: AttributedStringConvertible
 {
+    /// Required to conform to `AttributedStringConvertible`.
     public var attributedString: NSAttributedString
     {
         return self
     }
     
+    /// Required to conform to `AttributedStringConvertible`.
     public func attributedStringWithAddedAttributes(attributes: [String : AnyObject]) -> NSAttributedString
     {
         let mutable = NSMutableAttributedString(attributedString: self)
