@@ -16,6 +16,8 @@
 
 public extension NSUnderlineStyle
 {
+    // MARK: - Underline
+    
     /**
      Applies an underline style attribute to the enclosed attributed strings.
      
@@ -39,6 +41,8 @@ public extension NSUnderlineStyle
     {
         return Attributed.attribute(NSUnderlineStyleAttributeName, self.rawValue, strings)
     }
+    
+    // MARK: - Strikethrough
     
     /**
      Applies a strikethrough style attribute to the enclosed attributed strings.
