@@ -31,6 +31,8 @@ public protocol AttributedStringConvertible
 /// Swift's `String` is extended to conform to `AttributedStringConvertible`.
 extension String: AttributedStringConvertible
 {
+    // MARK: - Attributed String Convertible
+    
     /// Required to conform to `AttributedStringConvertible`.
     public var attributedString: NSAttributedString
     {
@@ -49,6 +51,8 @@ extension String: AttributedStringConvertible
 /// Foundation's `NSAttributedString` is extended to conform to `AttributedStringConvertible`.
 extension NSAttributedString: AttributedStringConvertible
 {
+    // MARK: - Attributed String Convertible
+    
     /// Required to conform to `AttributedStringConvertible`.
     public var attributedString: NSAttributedString
     {
