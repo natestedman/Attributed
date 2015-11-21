@@ -64,6 +64,7 @@ These additional framework types are extended with attribute functions:
 - `NSParagraphStyle`: `attribute`, which maps to `NSParagraphStyleAttributeName`.
 - `NSShadow`: `attribute`, which maps to `NSShadowAttributeName`.
 - `NSUnderlineStyle`: `attribute`, which maps to `NSUnderlineStyleAttributeName`; and `strikethroughAttribute`, which makes to `NSStrikethroughStyleAttributeName`.
+- `String`, on OS X only: `toolTipAttribute`, which maps to `NSToolTipAttributeName`.
 
 #### Numeric Types
 Attributes with numeric values use the `NSNumberConvertible` protocol. The framework provides implementations for these types:
