@@ -77,7 +77,7 @@ class AttributedTests: XCTestCase
         XCTAssertEqual(attributed, mutable)
     }
     
-    func testJoin()
+    func testStringJoin()
     {
         let attributed = [
             "Test",
@@ -88,5 +88,40 @@ class AttributedTests: XCTestCase
         mutable.addAttribute(NSForegroundColorAttributeName, value: ColorType.redColor(), range: NSMakeRange(4, 4))
         
         XCTAssertEqual(attributed, mutable)
+    }
+    
+    func testFunctionJoin()
+    {
+        let functions = [
+            ColorType.blackColor().foregroundAttribute,
+            ColorType.redColor().backgroundAttribute,
+            2.kernAttribute
+        ]
+        
+        XCTAssertEqual(
+            functions.join()(["Test"]).attributedString,
+            NSAttributedString(
+                string: "Test",
+                attributes: [
+                    NSForegroundColorAttributeName: ColorType.blackColor(),
+                    NSBackgroundColorAttributeName: ColorType.redColor(),
+                    NSKernAttributeName: 2
+                ]
+            )
+        )
+    }
+    
+    func testFunctionJoinOverride()
+    {
+        let functions = [
+            ColorType.redColor().foregroundAttribute,
+            ColorType.greenColor().foregroundAttribute,
+            ColorType.blueColor().foregroundAttribute,
+        ]
+        
+        XCTAssertEqual(
+            functions.join()(["Test"]).attributedString,
+            NSAttributedString(string: "Test", attributes: [NSForegroundColorAttributeName: ColorType.blueColor()])
+        )
     }
 }

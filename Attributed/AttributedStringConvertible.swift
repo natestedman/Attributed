@@ -10,6 +10,11 @@
 
 import Foundation
 
+// MARK: - Function Types
+
+/// An attribute function.
+public typealias AttributeFunction = [AttributedStringConvertible] -> AttributedStringConvertible
+
 // MARK: - Protocol
 
 /// A protocol for a type that can be converted to an attributed string.

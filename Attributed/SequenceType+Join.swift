@@ -18,3 +18,17 @@ public extension SequenceType where Generator.Element == AttributedStringConvert
         return NestedAttributedString(attributes: [:], children: Array(self))
     }
 }
+
+public extension SequenceType where Generator.Element == AttributeFunction
+{
+    /// Joins a sequence of partially applied attribute functions (or, extension member functions of an attribute value)
+    /// into a single function.
+    ///
+    /// If redundant attributes are included, the later version will take precedence.
+    public func join() -> AttributeFunction
+    {
+        return { strings in
+            self.reverse().reduce(strings.join(), combine: { current, function in function([current]) })
+        }
+    }
+}
