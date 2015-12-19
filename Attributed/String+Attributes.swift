@@ -16,18 +16,6 @@ extension String
     // MARK: - Tooltip
     
     /**
-    Applies a tooltip attribute to the enclosed attributed strings.
-    
-    The tooltip will not override a tooltip set deeper in the hierarchy.
-    
-    - parameter strings: The attributed strings to apply the tooltip to.
-    */
-    public func toolTipAttribute(strings: AttributedStringConvertible...) -> AttributedStringConvertible
-    {
-        return Attributed.attribute(NSToolTipAttributeName, self, strings)
-    }
-    
-    /**
      Applies a tooltip attribute to the enclosed attributed strings.
      
      The tooltip will not override a tooltip set deeper in the hierarchy.

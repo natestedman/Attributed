@@ -16,17 +16,7 @@
 
 public extension NSShadow
 {
-    /**
-     Applies a shadow to the enclosed attributed strings.
-     
-     The shadow will not override a shadow set deeper n the hierarchy.
-     
-     - parameter strings: The attributed strings to apply the shadow to.
-     */
-    public func attribute(strings: AttributedStringConvertible...) -> AttributedStringConvertible
-    {
-        return Attributed.attribute(NSShadowAttributeName, self, strings)
-    }
+    // MARK: - Attributes
     
     /**
      Applies a shadow to the enclosed attributed strings.

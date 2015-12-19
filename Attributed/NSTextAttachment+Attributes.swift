@@ -16,17 +16,7 @@
 
 public extension NSTextAttachment
 {
-    /**
-     Applies a text attachment attribute to the enclosed attributed strings.
-     
-     The text attachment value will not override a text attachment value set deeper in the hierarchy.
-     
-     - parameter strings: The attributed strings to apply the text attachment to.
-     */
-    public func attribute(strings: AttributedStringConvertible...) -> AttributedStringConvertible
-    {
-        return Attributed.attribute(NSAttachmentAttributeName, self, strings)
-    }
+    // MARK: - Attributes
     
     /**
      Applies a text attachment attribute to the enclosed attributed strings.

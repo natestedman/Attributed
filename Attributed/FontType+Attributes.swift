@@ -16,17 +16,7 @@
 
 public extension FontType
 {
-    /**
-     Applies a font attribute to the enclosed attributed strings.
-     
-     The font will not override a font set deeper in the hierarchy.
-     
-     - parameter strings: The attributed strings to apply the font to.
-     */
-    public func attribute(strings: AttributedStringConvertible...) -> AttributedStringConvertible
-    {
-        return Attributed.attribute(NSFontAttributeName, self, strings)
-    }
+    // MARK: - Attributes
     
     /**
      Applies a font attribute to the enclosed attributed strings.

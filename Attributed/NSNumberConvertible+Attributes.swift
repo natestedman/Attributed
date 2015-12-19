@@ -17,17 +17,6 @@
 public extension NSNumberConvertible
 {
     // MARK: - Baseline Offset
-    /**
-    Applies a baseline offset attribute to the enclosed attributed strings.
-    
-    The baseline offset value will not override a baseline offset value set deeper in the hierarchy.
-    
-    - parameter strings: The attributed strings to apply the baseline offset to.
-    */
-    public func baselineOffsetAttribute(strings: AttributedStringConvertible...) -> AttributedStringConvertible
-    {
-        return Attributed.attribute(NSBaselineOffsetAttributeName, self.NSNumberValue, strings)
-    }
     
     /**
      Applies a baseline offset attribute to the enclosed attributed strings.
@@ -42,17 +31,6 @@ public extension NSNumberConvertible
     }
     
     // MARK: - Kern
-    /**
-     Applies a kerning attribute to the enclosed attributed strings.
-     
-     The kerning value will not override a kerning value set deeper in the hierarchy.
-     
-     - parameter strings: The attributed strings to apply the kerning attribute to.
-     */
-    func kernAttribute(strings: AttributedStringConvertible...) -> AttributedStringConvertible
-    {
-        return Attributed.attribute(NSKernAttributeName, self.NSNumberValue, strings)
-    }
     
     /**
      Applies a kerning attribute to the enclosed attributed strings.

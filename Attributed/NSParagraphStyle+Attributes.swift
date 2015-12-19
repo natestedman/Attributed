@@ -16,17 +16,7 @@
 
 public extension NSParagraphStyle
 {
-    /**
-     Applies a paragraph style to the enclosed attributed strings.
-     
-     The paragraph style will not override a paragraph style set deeper n the hierarchy.
-     
-     - parameter strings: The attributed strings to apply the paragraph style to.
-     */
-    public func attribute(strings: AttributedStringConvertible...) -> AttributedStringConvertible
-    {
-        return Attributed.attribute(NSParagraphStyleAttributeName, self, strings)
-    }
+    // MARK: - Attributes
     
     /**
      Applies a paragraph style to the enclosed attributed strings.

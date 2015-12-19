@@ -15,17 +15,17 @@ class AttributedTests: XCTestCase
 {
     func testNestedColors()
     {
-        let attributed = ColorType.redColor().foregroundAttribute(
+        let attributed = ColorType.redColor().foregroundAttribute([
             "Test",
-            ColorType.blueColor().foregroundAttribute(
+            ColorType.blueColor().foregroundAttribute([
                 "Test",
-                ColorType.greenColor().foregroundAttribute(
+                ColorType.greenColor().foregroundAttribute([
                     "Test"
-                ),
+                ]),
                 "Test"
-            ),
+            ]),
             "Test"
-        ).attributedString
+        ]).attributedString
         
         let mutable = NSMutableAttributedString(string: "TestTestTestTestTest")
         mutable.addAttribute(NSForegroundColorAttributeName, value: ColorType.redColor(), range: NSMakeRange(0, 4))
@@ -39,17 +39,17 @@ class AttributedTests: XCTestCase
     
     func testDeepNesting()
     {
-        let attributed = 10.kernAttribute(
+        let attributed = 10.kernAttribute([
             "Test",
-            ColorType.blueColor().foregroundAttribute(
+            ColorType.blueColor().foregroundAttribute([
                 "Test",
-                ColorType.greenColor().foregroundAttribute(
+                ColorType.greenColor().foregroundAttribute([
                     "Test"
-                ),
+                ]),
                 "Test"
-            ),
+            ]),
             "Test"
-        ).attributedString
+        ]).attributedString
         
         let mutable = NSMutableAttributedString(string: "TestTestTestTestTest")
         mutable.addAttribute(NSKernAttributeName, value: 10, range: NSMakeRange(0, 20))
@@ -62,13 +62,13 @@ class AttributedTests: XCTestCase
     
     func testNilValue()
     {
-        let attributed = ColorType.blueColor().foregroundAttribute(
+        let attributed = ColorType.blueColor().foregroundAttribute([
             "Test",
-            attribute(NSForegroundColorAttributeName, nil,
+            attribute(NSForegroundColorAttributeName, nil, [
                 "Test",
-                ColorType.greenColor().foregroundAttribute("Test")
-            )
-        ).attributedString
+                ColorType.greenColor().foregroundAttribute(["Test"])
+            ])
+        ]).attributedString
         
         let mutable = NSMutableAttributedString(string: "TestTestTest")
         mutable.addAttribute(NSForegroundColorAttributeName, value: ColorType.blueColor(), range: NSMakeRange(0, 4))

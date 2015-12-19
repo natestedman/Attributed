@@ -25,36 +25,12 @@ public extension ColorType
      
      - parameter strings: The attributed strings to apply the foreground color to.
      */
-    public func foregroundAttribute(strings: AttributedStringConvertible...) -> AttributedStringConvertible
-    {
-        return Attributed.attribute(NSForegroundColorAttributeName, self, strings)
-    }
-    
-    /**
-     Applies a foreground color attribute to the enclosed attributed strings.
-     
-     The foreground color will not override a foreground color set deeper in the hierarchy.
-     
-     - parameter strings: The attributed strings to apply the foreground color to.
-     */
     public func foregroundAttribute(strings: [AttributedStringConvertible]) -> AttributedStringConvertible
     {
         return Attributed.attribute(NSForegroundColorAttributeName, self, strings)
     }
     
     // MARK: - Background Color
-    
-    /**
-     Applies a background color attribute to the enclosed attributed strings.
-     
-     The background color will not override a background color set deeper in the hierarchy.
-     
-     - parameter strings: The attributed strings to apply the background color to.
-     */
-    public func backgroundAttribute(strings: AttributedStringConvertible...) -> AttributedStringConvertible
-    {
-        return Attributed.attribute(NSBackgroundColorAttributeName, self, strings)
-    }
     
     /**
      Applies a background color attribute to the enclosed attributed strings.
@@ -77,36 +53,12 @@ public extension ColorType
      
      - parameter strings: The attributed strings to apply the underline color to.
      */
-    public func underlineAttribute(strings: AttributedStringConvertible...) -> AttributedStringConvertible
-    {
-        return Attributed.attribute(NSUnderlineColorAttributeName, self, strings)
-    }
-    
-    /**
-     Applies an underline color attribute to the enclosed attributed strings.
-     
-     The underline color will not override an underline color set deeper in the hierarchy.
-     
-     - parameter strings: The attributed strings to apply the underline color to.
-     */
     public func underlineAttribute(strings: [AttributedStringConvertible]) -> AttributedStringConvertible
     {
         return Attributed.attribute(NSUnderlineColorAttributeName, self, strings)
     }
     
     // MARK: - Strikethrough Color
-    
-    /**
-     Applies an strikethrough color attribute to the enclosed attributed strings.
-     
-     The strikethrough color will not override an strikethrough color set deeper in the hierarchy.
-     
-     - parameter strings: The attributed strings to apply the strikethrough color to.
-     */
-    public func strikethroughAttribute(strings: AttributedStringConvertible...) -> AttributedStringConvertible
-    {
-        return Attributed.attribute(NSStrikethroughColorAttributeName, self, strings)
-    }
     
     /**
      Applies an strikethrough color attribute to the enclosed attributed strings.

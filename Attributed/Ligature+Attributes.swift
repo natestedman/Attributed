@@ -25,18 +25,6 @@ public extension Ligature
      
      - parameter strings: The attributed strings to apply the ligature setting to.
      */
-    public func attribute(strings: AttributedStringConvertible...) -> AttributedStringConvertible
-    {
-        return Attributed.attribute(NSLigatureAttributeName, self.rawValue, strings)
-    }
-    
-    /**
-     Applies a ligature setting to the enclosed attributed strings.
-     
-     The ligature setting will not override a ligature setting set deeper in the hierarchy.
-     
-     - parameter strings: The attributed strings to apply the ligature setting to.
-     */
     public func attribute(strings: [AttributedStringConvertible]) -> AttributedStringConvertible
     {
         return Attributed.attribute(NSLigatureAttributeName, self.rawValue, strings)

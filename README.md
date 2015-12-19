@@ -11,18 +11,18 @@ Attributed strings are composed through function calls on extensions of attribut
 ```swift
 label.attributedText = [
     "This is a string with ",
-    UIColor.blueColor().foregroundAttribute(
+    UIColor.blueColor().foregroundAttribute([
         "blue ",
-        100.kernAttribute(
+        100.kernAttribute([
             "kerned"
-        ),
+        ]),
         " text"
-    ),
+    ]),
     " and ",
-    UIColor.redColor().foregroundAttribute(
+    UIColor.redColor().foregroundAttribute([
         NSAttributedString(string: "red", attributes: ["Custom": "Value"]),
         " text"
-    ),
+    ]),
     "."
 ].join().attributedString
 ```
@@ -45,7 +45,7 @@ UIColor.greenColor().foregroundAttribute(
 ```
 
 ### Attributes
-The provided attribute functions take the value of the attribute as the first value, and a variadic number of `AttributedStringConvertible` values afterwards. For composition in other functions, versions with a single `[AttributedStringConvertible]` parameter are also provided for all functions.
+Attribute functions take an array of attributed string convertibles, which are joined to form an attributed string.
 
 #### Colors
 `NSColor` and `UIColor` are extended with these attribute functions:
@@ -102,14 +102,14 @@ The `Ligature` enumeration is extended with the `attribute` function, which maps
 Custom attributes can be added with the `attribute` and `attributes` functions.
 
 ```swift
-UIColor.blueColor().foregroundColor(
+UIColor.blueColor().foregroundColor([
     "This is a blue string with a ",
     attributes(
         ["Custom": "Value"],
-        "custom attribute included"
+        ["custom attribute included"]
     ),
     "."
-)
+])
 ```
 
 ## Installation

@@ -14,17 +14,7 @@ import AppKit
 
 extension NSCursor
 {
-    /**
-     Applies a cursor to the enclosed attributed strings.
-     
-     The cursor will not override a cursor set deeper in the hierarchy.
-     
-     - parameter strings: The attributed strings to apply the shadow to.
-     */
-    public func attribute(strings: AttributedStringConvertible...) -> AttributedStringConvertible
-    {
-        return Attributed.attribute(NSCursorAttributeName, self, strings)
-    }
+    // MARK: - Attributes
     
     /**
      Applies a cursor to the enclosed attributed strings.
