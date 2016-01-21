@@ -23,10 +23,10 @@ public extension Ligature
      
      The ligature setting will not override a ligature setting set deeper in the hierarchy.
      
-     - parameter strings: The attributed strings to apply the ligature setting to.
+     - parameter string: The attributed string convertible to apply the ligature setting to.
      */
-    public func attribute(strings: [AttributedStringConvertible]) -> AttributedStringConvertible
+    public func attribute(string: AttributedStringConvertible) -> AttributedStringConvertible
     {
-        return Attributed.attribute(NSLigatureAttributeName, self.rawValue, strings)
+        return Attributed.attribute(NSLigatureAttributeName, self.rawValue, string)
     }
 }

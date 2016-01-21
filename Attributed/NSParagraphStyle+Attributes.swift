@@ -23,10 +23,10 @@ public extension NSParagraphStyle
      
      The paragraph style will not override a paragraph style set deeper n the hierarchy.
      
-     - parameter strings: The attributed strings to apply the paragraph style to.
+     - parameter string: The attributed string convertible to apply the paragraph style to.
      */
-    public func attribute(strings: [AttributedStringConvertible]) -> AttributedStringConvertible
+    public func attribute(string: AttributedStringConvertible) -> AttributedStringConvertible
     {
-        return Attributed.attribute(NSParagraphStyleAttributeName, self, strings)
+        return Attributed.attribute(NSParagraphStyleAttributeName, self, string)
     }
 }

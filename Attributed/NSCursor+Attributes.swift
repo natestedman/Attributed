@@ -21,11 +21,11 @@ extension NSCursor
      
      The cursor will not override a cursor set deeper in the hierarchy.
      
-     - parameter strings: The attributed strings to apply the cursor to.
+     - parameter string: The attributed string convertible to apply the cursor to.
      */
-    public func attribute(strings: [AttributedStringConvertible]) -> AttributedStringConvertible
+    public func attribute(string: AttributedStringConvertible) -> AttributedStringConvertible
     {
-        return Attributed.attribute(NSCursorAttributeName, self, strings)
+        return Attributed.attribute(NSCursorAttributeName, self, string)
     }
 }
 

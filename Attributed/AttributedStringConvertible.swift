@@ -13,7 +13,7 @@ import Foundation
 // MARK: - Function Types
 
 /// An attribute function.
-public typealias AttributeFunction = [AttributedStringConvertible] -> AttributedStringConvertible
+public typealias AttributeFunction = AttributedStringConvertible -> AttributedStringConvertible
 
 // MARK: - Protocol
 

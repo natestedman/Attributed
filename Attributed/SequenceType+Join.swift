@@ -27,8 +27,8 @@ public extension SequenceType where Generator.Element == AttributeFunction
     /// If redundant attributes are included, the later version will take precedence.
     public func join() -> AttributeFunction
     {
-        return { strings in
-            self.reverse().reduce(strings.join(), combine: { current, function in function([current]) })
+        return { string in
+            self.reverse().reduce(string, combine: { current, function in function(current) })
         }
     }
 }

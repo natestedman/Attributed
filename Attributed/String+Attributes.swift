@@ -20,11 +20,11 @@ extension String
      
      The tooltip will not override a tooltip set deeper in the hierarchy.
      
-     - parameter strings: The attributed strings to apply the tooltip to.
+     - parameter string: The attributed string convertible to apply the tooltip to.
      */
-    public func toolTipAttribute(strings: [AttributedStringConvertible]) -> AttributedStringConvertible
+    public func toolTipAttribute(string: AttributedStringConvertible) -> AttributedStringConvertible
     {
-        return Attributed.attribute(NSToolTipAttributeName, self, strings)
+        return Attributed.attribute(NSToolTipAttributeName, self, string)
     }
 }
 #endif

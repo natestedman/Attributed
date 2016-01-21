@@ -23,10 +23,10 @@ public extension FontType
      
      The font will not override a font set deeper in the hierarchy.
      
-     - parameter strings: The attributed strings to apply the font to.
+     - parameter string: The attributed string convertible to apply the font to.
      */
-    public func attribute(strings: [AttributedStringConvertible]) -> AttributedStringConvertible
+    public func attribute(string: AttributedStringConvertible) -> AttributedStringConvertible
     {
-        return Attributed.attribute(NSFontAttributeName, self, strings)
+        return Attributed.attribute(NSFontAttributeName, self, string)
     }
 }

@@ -16,10 +16,10 @@
  - parameter attributes: The attributes to apply.
  - parameter strings:    The convertible strings.
  */
-public func attributes(attributes: [String:AnyObject?], _ strings: [AttributedStringConvertible])
+public func attributes(attributes: [String:AnyObject?], _ string: AttributedStringConvertible)
     -> AttributedStringConvertible
 {
-    return NestedAttributedString(attributes: attributes, children: strings)
+    return NestedAttributedString(attributes: attributes, children: [string])
 }
 
 /**
@@ -31,8 +31,8 @@ public func attributes(attributes: [String:AnyObject?], _ strings: [AttributedSt
  - parameter value:     The attribute value to apply.
  - parameter strings:   The convertible strings.
  */
-public func attribute(attribute: String, _ value: AnyObject?, _ strings: [AttributedStringConvertible])
+public func attribute(attribute: String, _ value: AnyObject?, _ string: AttributedStringConvertible)
     -> AttributedStringConvertible
 {
-    return Attributed.attributes([attribute: value], strings)
+    return Attributed.attributes([attribute: value], string)
 }
