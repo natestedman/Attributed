@@ -13,16 +13,16 @@ label.attributedText = [
     "This is a string with ",
     UIColor.blueColor().foregroundAttribute([
         "blue ",
-        100.kernAttribute([
+        100.kernAttribute(
             "kerned"
-        ]),
+        ),
         " text"
-    ]),
+    ].join()),
     " and ",
     UIColor.redColor().foregroundAttribute([
         NSAttributedString(string: "red", attributes: ["Custom": "Value"]),
         " text"
-    ]),
+    ].join()),
     "."
 ].join().attributedString
 ```
@@ -35,13 +35,13 @@ Any value that conforms to the `AttributedStringConvertible` protocol can be pas
 Outer attributed values *do not* override inner values, so this code works as expected:
 
 ```swift
-UIColor.greenColor().foregroundAttribute(
+UIColor.greenColor().foregroundAttribute([
     "There is some ",
     UIColor.blueColor().foregroundAttribute(
         "blue text "
     ),
     "embedded in this green text."
-)
+].join())
 ```
 
 ### Attributes
@@ -106,10 +106,10 @@ UIColor.blueColor().foregroundColor([
     "This is a blue string with a ",
     attributes(
         ["Custom": "Value"],
-        ["custom attribute included"]
+        "custom attribute included"
     ),
     "."
-])
+].join())
 ```
 
 ## Installation
