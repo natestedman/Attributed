@@ -22,6 +22,10 @@ custom_categories:
         - NSShadow
         - NSTextAttachment
         - NSUnderlineStyle
+
+    - name: Sequence Extensions
+      children:
+        - SequenceType
     
     - name: Number Convertibles
       children:
