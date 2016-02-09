@@ -60,7 +60,7 @@ class AttributedTests: XCTestCase
     {
         let attributed = ColorType.blueColor().foregroundAttribute([
             "Test",
-            attribute(NSForegroundColorAttributeName, nil, [
+            attribute(NSForegroundColorAttributeName, withValue: nil)([
                 "Test",
                 ColorType.greenColor().foregroundAttribute("Test")
             ].join())

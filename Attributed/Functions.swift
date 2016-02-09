@@ -9,30 +9,28 @@
 // this software. If not, see <http://creativecommons.org/publicdomain/zero/1.0/>.
 
 /**
- Returns an attributed string convertible with the specified attributes applied at the root level.
+ Returns an attribute function to apply the specified attributes.
  
  The attributes will not override matching attributes deeper in the hierarchy.
  
  - parameter attributes: The attributes to apply.
- - parameter strings:    The convertible strings.
  */
-public func attributes(attributes: [String:AnyObject?], _ string: AttributedStringConvertible)
-    -> AttributedStringConvertible
+public func attributesWithValues(attributes: [String:AnyObject?]) -> AttributeFunction
 {
-    return NestedAttributedString(attributes: attributes, children: [string])
+    return { string in
+        return NestedAttributedString(attributes: attributes, children: [string])
+    }
 }
 
 /**
- Returns an attributed string convertible with the specified attribute applied at the root level.
+ Returns an attribute function to apply the specified attribute.
  
  The attribute value will not override a matching attribute deeper in the hierarchy.
  
  - parameter attribute: The attribute name to apply.
  - parameter value:     The attribute value to apply.
- - parameter strings:   The convertible strings.
  */
-public func attribute(attribute: String, _ value: AnyObject?, _ string: AttributedStringConvertible)
-    -> AttributedStringConvertible
+public func attribute(attribute: String, withValue value: AnyObject?) -> AttributeFunction
 {
-    return Attributed.attributes([attribute: value], string)
+    return attributesWithValues([attribute: value])
 }

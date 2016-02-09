@@ -27,7 +27,7 @@ public extension NSNumberConvertible
      */
     public func baselineOffsetAttribute(string: AttributedStringConvertible) -> AttributedStringConvertible
     {
-        return Attributed.attribute(NSBaselineOffsetAttributeName, self.NSNumberValue, string)
+        return Attributed.attribute(NSBaselineOffsetAttributeName, withValue: self.NSNumberValue)(string)
     }
     
     // MARK: - Kern
@@ -41,6 +41,6 @@ public extension NSNumberConvertible
      */
     func kernAttribute(string: AttributedStringConvertible) -> AttributedStringConvertible
     {
-        return Attributed.attribute(NSKernAttributeName, self.NSNumberValue, string)
+        return Attributed.attribute(NSKernAttributeName, withValue: self.NSNumberValue)(string)
     }
 }

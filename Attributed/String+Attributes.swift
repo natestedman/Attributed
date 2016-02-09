@@ -24,7 +24,7 @@ extension String
      */
     public func toolTipAttribute(string: AttributedStringConvertible) -> AttributedStringConvertible
     {
-        return Attributed.attribute(NSToolTipAttributeName, self, string)
+        return Attributed.attribute(NSToolTipAttributeName, withValue: self)(string)
     }
 }
 #endif

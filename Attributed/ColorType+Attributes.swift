@@ -27,7 +27,7 @@ public extension ColorType
      */
     public func foregroundAttribute(string: AttributedStringConvertible) -> AttributedStringConvertible
     {
-        return Attributed.attribute(NSForegroundColorAttributeName, self, string)
+        return Attributed.attribute(NSForegroundColorAttributeName, withValue: self)(string)
     }
     
     // MARK: - Background Color
@@ -41,7 +41,7 @@ public extension ColorType
      */
     public func backgroundAttribute(string: AttributedStringConvertible) -> AttributedStringConvertible
     {
-        return Attributed.attribute(NSBackgroundColorAttributeName, self, string)
+        return Attributed.attribute(NSBackgroundColorAttributeName, withValue: self)(string)
     }
     
     // MARK: - Underline Color
@@ -55,7 +55,7 @@ public extension ColorType
      */
     public func underlineAttribute(string: AttributedStringConvertible) -> AttributedStringConvertible
     {
-        return Attributed.attribute(NSUnderlineColorAttributeName, self, string)
+        return Attributed.attribute(NSUnderlineColorAttributeName, withValue: self)(string)
     }
     
     // MARK: - Strikethrough Color
@@ -69,6 +69,6 @@ public extension ColorType
      */
     public func strikethroughAttribute(string: AttributedStringConvertible) -> AttributedStringConvertible
     {
-        return Attributed.attribute(NSStrikethroughColorAttributeName, self, string)
+        return Attributed.attribute(NSStrikethroughColorAttributeName, withValue: self)(string)
     }
 }

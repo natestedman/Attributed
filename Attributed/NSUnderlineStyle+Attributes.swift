@@ -27,7 +27,7 @@ public extension NSUnderlineStyle
      */
     public func attribute(string: AttributedStringConvertible) -> AttributedStringConvertible
     {
-        return Attributed.attribute(NSUnderlineStyleAttributeName, self.rawValue, string)
+        return Attributed.attribute(NSUnderlineStyleAttributeName, withValue: self.rawValue)(string)
     }
     
     // MARK: - Strikethrough
@@ -41,6 +41,6 @@ public extension NSUnderlineStyle
      */
     public func strikethroughAttribute(string: AttributedStringConvertible) -> AttributedStringConvertible
     {
-        return Attributed.attribute(NSStrikethroughStyleAttributeName, self.rawValue, string)
+        return Attributed.attribute(NSStrikethroughStyleAttributeName, withValue: self.rawValue)(string)
     }
 }
