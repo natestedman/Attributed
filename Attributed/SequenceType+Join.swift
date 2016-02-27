@@ -10,9 +10,9 @@
 
 public extension SequenceType where Generator.Element == AttributedStringConvertible
 {
-    /**
-     Joins multiple `AttributedStringConvertible` values into one.
-     */
+    // MARK: - Joining Attributed String Convertibles
+
+    /// Joins multiple `AttributedStringConvertible` values into one.
     public func join() -> AttributedStringConvertible
     {
         return NestedAttributedString(attributes: [:], children: Array(self))
@@ -21,10 +21,12 @@ public extension SequenceType where Generator.Element == AttributedStringConvert
 
 public extension SequenceType where Generator.Element == AttributeFunction
 {
-    /// Joins a sequence of partially applied attribute functions (or, extension member functions of an attribute value)
-    /// into a single function.
+    // MARK: - Joining Attribute Functions
+
+    /// Joins a sequence of attribute functions into a single function.
     ///
-    /// If redundant attributes are included, the later version will take precedence.
+    /// The attributes are applied in order, so if redundant attributes are included, the later version will take
+    /// precedence.
     public func join() -> AttributeFunction
     {
         return { string in

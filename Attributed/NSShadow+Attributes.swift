@@ -14,6 +14,7 @@
     import AppKit
 #endif
 
+/// `NSShadow` is extended to provide an attribute function.
 public extension NSShadow
 {
     // MARK: - Attributes

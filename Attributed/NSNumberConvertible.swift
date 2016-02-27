@@ -18,13 +18,16 @@ import Foundation
 /// Extensions for number-based attributes extend this type.
 public protocol NSNumberConvertible
 {
-    /// The value of the type, as an `NSNumber` instance.
+    /// The value, wrapped in an `NSNumber` instance.
     var NSNumberValue: NSNumber { get }
 }
 
 // MARK: - NSNumber
+
+/// `NSNumber` is extended to conform to `NSNumberConvertible`.
 extension NSNumber: NSNumberConvertible
 {
+    /// Returns `self`.
     public var NSNumberValue: NSNumber
     {
         return self
@@ -32,8 +35,11 @@ extension NSNumber: NSNumberConvertible
 }
 
 // MARK: - Int
+
+/// `Int` is extended to conform to `NSNumberConvertible`.
 extension Int: NSNumberConvertible
 {
+    /// The value, wrapped in an `NSNumber` instance.
     public var NSNumberValue: NSNumber
     {
         return self
@@ -41,8 +47,11 @@ extension Int: NSNumberConvertible
 }
 
 // MARK: - UInt
+
+/// `UInt` is extended to conform to `NSNumberConvertible`.
 extension UInt: NSNumberConvertible
 {
+    /// The value, wrapped in an `NSNumber` instance.
     public var NSNumberValue: NSNumber
     {
         return self
@@ -50,8 +59,11 @@ extension UInt: NSNumberConvertible
 }
 
 // MARK: - Int8
+
+/// `Int8` is extended to conform to `NSNumberConvertible`.
 extension Int8: NSNumberConvertible
 {
+    /// The value, wrapped in an `NSNumber` instance.
     public var NSNumberValue: NSNumber
     {
         return Int(self)
@@ -59,8 +71,11 @@ extension Int8: NSNumberConvertible
 }
 
 // MARK: - UInt8
+
+/// `UInt8` is extended to conform to `NSNumberConvertible`.
 extension UInt8: NSNumberConvertible
 {
+    /// The value, wrapped in an `NSNumber` instance.
     public var NSNumberValue: NSNumber
     {
         return UInt(self)
@@ -68,8 +83,11 @@ extension UInt8: NSNumberConvertible
 }
 
 // MARK: - Int16
+
+/// `Int16` is extended to conform to `NSNumberConvertible`.
 extension Int16: NSNumberConvertible
 {
+    /// The value, wrapped in an `NSNumber` instance.
     public var NSNumberValue: NSNumber
     {
         return Int(self)
@@ -77,8 +95,11 @@ extension Int16: NSNumberConvertible
 }
 
 // MARK: - UInt16
+
+/// `UInt16` is extended to conform to `NSNumberConvertible`.
 extension UInt16: NSNumberConvertible
 {
+    /// The value, wrapped in an `NSNumber` instance.
     public var NSNumberValue: NSNumber
     {
         return UInt(self)
@@ -86,8 +107,11 @@ extension UInt16: NSNumberConvertible
 }
 
 // MARK: - Int32
+
+/// `Int32` is extended to conform to `NSNumberConvertible`.
 extension Int32: NSNumberConvertible
 {
+    /// The value, wrapped in an `NSNumber` instance.
     public var NSNumberValue: NSNumber
     {
         return Int(self)
@@ -95,8 +119,11 @@ extension Int32: NSNumberConvertible
 }
 
 // MARK: - UInt32
+
+/// `UInt32` is extended to conform to `NSNumberConvertible`.
 extension UInt32: NSNumberConvertible
 {
+    /// The value, wrapped in an `NSNumber` instance.
     public var NSNumberValue: NSNumber
     {
         return UInt(self)
@@ -104,8 +131,11 @@ extension UInt32: NSNumberConvertible
 }
 
 // MARK: - Int64
+
+/// `Int64` is extended to conform to `NSNumberConvertible`.
 extension Int64: NSNumberConvertible
 {
+    /// The value, wrapped in an `NSNumber` instance.
     public var NSNumberValue: NSNumber
     {
         return NSNumber(longLong: self)
@@ -113,8 +143,11 @@ extension Int64: NSNumberConvertible
 }
 
 // MARK: - UInt64
+
+/// `UInt64` is extended to conform to `NSNumberConvertible`.
 extension UInt64: NSNumberConvertible
 {
+    /// The value, wrapped in an `NSNumber` instance.
     public var NSNumberValue: NSNumber
     {
         return NSNumber(unsignedLongLong: self)
@@ -122,8 +155,11 @@ extension UInt64: NSNumberConvertible
 }
 
 // MARK: - Float
+
+/// `Float` is extended to conform to `NSNumberConvertible`.
 extension Float: NSNumberConvertible
 {
+    /// The value, wrapped in an `NSNumber` instance.
     public var NSNumberValue: NSNumber
     {
         return self
@@ -131,8 +167,11 @@ extension Float: NSNumberConvertible
 }
 
 // MARK: - Double
+
+/// `Double` is extended to conform to `NSNumberConvertible`.
 extension Double: NSNumberConvertible
 {
+    /// The value, wrapped in an `NSNumber` instance.
     public var NSNumberValue: NSNumber
     {
         return self
@@ -140,8 +179,11 @@ extension Double: NSNumberConvertible
 }
 
 // MARK: - CGFloat
+
+/// `CGFloat` is extended to conform to `NSNumberConvertible`.
 extension CGFloat: NSNumberConvertible
 {
+    /// The value, wrapped in an `NSNumber` instance.
     public var NSNumberValue: NSNumber
     {
         return self

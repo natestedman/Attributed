@@ -12,7 +12,20 @@ import Foundation
 
 // MARK: - Function Types
 
-/// An attribute function.
+/// The type for attribute functions.
+///
+/// All extensions provided by Attributed add functions of this type. For example, an extension of `UIColor` can be used
+/// to create red text:
+///
+///     UIColor.redColor().foregroundAttribute(text)
+///
+/// However, referencing `UIColor.redColor().foregroundAttribute` alone can also be useful, as it is equivalent to an
+/// `AttributeFunction` that applies red text to its parameter. Attribute functions can be used in sequences, which can
+/// be reduced to a single `AttributeFunction` with the `join` extension of `SequenceType`.
+///
+/// If writing code that should compose with Attributed, it typically makes sense to write functions that will apply
+/// attributes in terms of `AttributeFunction`. If additional parameters are required, it's better to return a closure
+/// than to accept an `AttributedStringConvertible` alongside other parameters.
 public typealias AttributeFunction = AttributedStringConvertible -> AttributedStringConvertible
 
 // MARK: - Protocol

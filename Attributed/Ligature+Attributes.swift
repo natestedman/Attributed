@@ -14,6 +14,7 @@
     import AppKit
 #endif
 
+/// `Ligature` is extended to provide an attribute function.
 public extension Ligature
 {
     // MARK: - Attributes

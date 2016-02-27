@@ -14,7 +14,7 @@ public enum Ligature: Int
     /// No ligatures will be used.
     case None = 0
     
-    /// The default ligatures will be used
+    /// The default ligatures will be used.
     case Default = 1
     
     #if os(OSX)

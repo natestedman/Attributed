@@ -14,6 +14,7 @@
     import AppKit
 #endif
 
+/// `ColorType` is extended to provide foreground, background, underline, and strikethrough color attributes.
 public extension ColorType
 {
     // MARK: - Foreground Color

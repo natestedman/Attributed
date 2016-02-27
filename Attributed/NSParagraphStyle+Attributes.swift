@@ -14,6 +14,7 @@
     import AppKit
 #endif
 
+/// `NSParagraphStyle` is extended to provide an attribute function.
 public extension NSParagraphStyle
 {
     // MARK: - Attributes

@@ -11,6 +11,7 @@
 #if os(OSX)
 import AppKit
 
+/// `String` is extended to provide a tooltip attribute function.
 extension String
 {
     // MARK: - Tooltip

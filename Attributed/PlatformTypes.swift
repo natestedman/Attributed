@@ -11,17 +11,17 @@
 #if os(iOS)
     import UIKit
     
-    /// A typealias for UIFont.
+    /// A typealias for `UIFont`.
     public typealias FontType = UIFont
     
-    /// A typealias for UIColor
+    /// A typealias for `UIColor`.
     public typealias ColorType = UIColor
 #else
     import AppKit
     
-    /// A typealias for NSFont
+    /// A typealias for `NSFont`.
     public typealias FontType = NSFont
     
-    /// A typealias for NSColor
+    /// A typealias for `NSColor`.
     public typealias ColorType = NSColor
 #endif

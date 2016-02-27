@@ -12,6 +12,7 @@
 
 import AppKit
 
+/// `NSCursor` is extended to provide an attribute function.
 extension NSCursor
 {
     // MARK: - Attributes

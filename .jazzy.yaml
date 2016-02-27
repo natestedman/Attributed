@@ -8,8 +8,8 @@ custom_categories:
     - name: Attribute Functions
       children:
         - AttributeFunction
-        - attribute(_:_:_:)
-        - attributes(_:_:)
+        - attribute(_:withValue:)
+        - attributesWithValues(_:)
     
     - name: Attribute Extensions
       children:

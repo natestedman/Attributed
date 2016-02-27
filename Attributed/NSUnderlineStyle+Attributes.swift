@@ -14,6 +14,7 @@
     import AppKit
 #endif
 
+/// `NSUnderlineStyle` is extended to provide underline and strikethrough attribute functions.
 public extension NSUnderlineStyle
 {
     // MARK: - Underline

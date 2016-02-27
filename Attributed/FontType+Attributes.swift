@@ -14,6 +14,7 @@
     import AppKit
 #endif
 
+/// `FontType` is extended to provide an attribute function.
 public extension FontType
 {
     // MARK: - Attributes

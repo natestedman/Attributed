@@ -14,6 +14,7 @@
     import AppKit
 #endif
 
+/// `NSTextAttachment` is extended to provide an attribute function.
 public extension NSTextAttachment
 {
     // MARK: - Attributes

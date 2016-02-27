@@ -14,6 +14,7 @@
     import AppKit
 #endif
 
+/// `NSNumberConvertible` is extended to provide baseline offset and kerning attribute functions.
 public extension NSNumberConvertible
 {
     // MARK: - Baseline Offset
