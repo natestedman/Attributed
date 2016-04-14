@@ -13,6 +13,8 @@
 		434DBBCA1BEC3AD000C11F09 /* NSShadow+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434DBBC91BEC3AD000C11F09 /* NSShadow+Attributes.swift */; };
 		434DBBCB1BEC3AD000C11F09 /* NSShadow+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434DBBC91BEC3AD000C11F09 /* NSShadow+Attributes.swift */; };
 		434DBBCC1BEC3AD400C11F09 /* NSUnderlineStyle+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434DBBC71BEC39FA00C11F09 /* NSUnderlineStyle+Attributes.swift */; };
+		437578A51CBF2C7100243662 /* NSURL+Attributed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437578A41CBF2C7100243662 /* NSURL+Attributed.swift */; };
+		437578A61CBF2C7100243662 /* NSURL+Attributed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437578A41CBF2C7100243662 /* NSURL+Attributed.swift */; };
 		43C752311BEA525100F928E5 /* ColorType+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C752301BEA525100F928E5 /* ColorType+Attributes.swift */; };
 		43C752321BEA525100F928E5 /* ColorType+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C752301BEA525100F928E5 /* ColorType+Attributes.swift */; };
 		43C752371BEA5F0A00F928E5 /* FontType+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C752361BEA5F0A00F928E5 /* FontType+Attributes.swift */; };
@@ -69,6 +71,7 @@
 		433A9C0D1BECF169009A3919 /* SequenceType+Join.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SequenceType+Join.swift"; sourceTree = "<group>"; };
 		434DBBC71BEC39FA00C11F09 /* NSUnderlineStyle+Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSUnderlineStyle+Attributes.swift"; sourceTree = "<group>"; };
 		434DBBC91BEC3AD000C11F09 /* NSShadow+Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSShadow+Attributes.swift"; sourceTree = "<group>"; };
+		437578A41CBF2C7100243662 /* NSURL+Attributed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+Attributed.swift"; sourceTree = "<group>"; };
 		43C752301BEA525100F928E5 /* ColorType+Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ColorType+Attributes.swift"; sourceTree = "<group>"; };
 		43C752361BEA5F0A00F928E5 /* FontType+Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FontType+Attributes.swift"; sourceTree = "<group>"; };
 		43C752391BEA601900F928E5 /* NSTextAttachment+Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTextAttachment+Attributes.swift"; sourceTree = "<group>"; };
@@ -168,6 +171,7 @@
 				43C7523C1BEA610A00F928E5 /* NSParagraphStyle+Attributes.swift */,
 				434DBBC91BEC3AD000C11F09 /* NSShadow+Attributes.swift */,
 				43C752391BEA601900F928E5 /* NSTextAttachment+Attributes.swift */,
+				437578A41CBF2C7100243662 /* NSURL+Attributed.swift */,
 				434DBBC71BEC39FA00C11F09 /* NSUnderlineStyle+Attributes.swift */,
 				43D5EA141C0026A400E48BD6 /* String+Attributes.swift */,
 			);
@@ -399,6 +403,7 @@
 				43C7523D1BEA610A00F928E5 /* NSParagraphStyle+Attributes.swift in Sources */,
 				43C993E31BE3BAA100CF90DD /* Functions.swift in Sources */,
 				43C993ED1BE3C2E800CF90DD /* Ligature.swift in Sources */,
+				437578A51CBF2C7100243662 /* NSURL+Attributed.swift in Sources */,
 				43C752311BEA525100F928E5 /* ColorType+Attributes.swift in Sources */,
 				43D5EA151C0026A400E48BD6 /* String+Attributes.swift in Sources */,
 				43C993E71BE3BB0B00CF90DD /* AttributedStringConvertible.swift in Sources */,
@@ -430,6 +435,7 @@
 				43C7523E1BEA610A00F928E5 /* NSParagraphStyle+Attributes.swift in Sources */,
 				43C994101BE3DE8900CF90DD /* Ligature.swift in Sources */,
 				434DBBCB1BEC3AD000C11F09 /* NSShadow+Attributes.swift in Sources */,
+				437578A61CBF2C7100243662 /* NSURL+Attributed.swift in Sources */,
 				43C994141BE3DE8900CF90DD /* NestedAttributedString.swift in Sources */,
 				43C994151BE3DE8900CF90DD /* PlatformTypes.swift in Sources */,
 				43C752321BEA525100F928E5 /* ColorType+Attributes.swift in Sources */,

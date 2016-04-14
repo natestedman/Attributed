@@ -69,6 +69,7 @@ These additional framework types are extended with attribute functions:
 - `NSTextAttachment`: `attribute`, which maps to `NSAttachmentAttributeName`.
 - `NSParagraphStyle`: `attribute`, which maps to `NSParagraphStyleAttributeName`.
 - `NSShadow`: `attribute`, which maps to `NSShadowAttributeName`.
+- `NSURL`: `attribute`, which maps to `NSLinkAttributeName`.
 - `NSUnderlineStyle`: `attribute`, which maps to `NSUnderlineStyleAttributeName`; and `strikethroughAttribute`, which maps to `NSStrikethroughStyleAttributeName`.
 - `String`, on OS X only: `toolTipAttribute`, which maps to `NSToolTipAttributeName`.
 
