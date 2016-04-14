@@ -93,6 +93,7 @@ Attributes with numeric values use the `NSNumberConvertible` protocol. The frame
 Types that conform to `NSNumberConvertible` are extended with these functions:
 
 - `baselineOffsetAttribute`, which maps to `NSBaselineOffsetAttributeName`.
+- `expansionAttribute`, which maps to `NSExpansionAttributeName`.
 - `kernAttribute`, which maps to `NSKernAttributeName`.
 
 #### Ligatures

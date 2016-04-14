@@ -30,6 +30,20 @@ public extension NSNumberConvertible
     {
         return Attributed.attribute(name: NSBaselineOffsetAttributeName, value: self.NSNumberValue)(string)
     }
+
+    // MARK: - Expansion
+
+    /**
+     Applies an expansion attribute to the enclosed attributed string.
+
+     The expansion value will not override a expansion value set deeper in the hierarchy.
+
+     - parameter string: The attributed string convertible to apply the expansion to.
+     */
+    public func expansionAttribute(string: AttributedStringConvertible) -> AttributedStringConvertible
+    {
+        return Attributed.attribute(name: NSExpansionAttributeName, value: self.NSNumberValue)(string)
+    }
     
     // MARK: - Kern
     
