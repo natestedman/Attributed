@@ -15,10 +15,10 @@
  
  - parameter attributes: The attributes to apply.
  */
-public func attributesWithValues(attributes: [String:AnyObject?]) -> AttributeFunction
+public func attributes(values values: [String:AnyObject?]) -> AttributeFunction
 {
     return { string in
-        return NestedAttributedString(attributes: attributes, children: [string])
+        return NestedAttributedString(attributes: values, children: [string])
     }
 }
 
@@ -30,7 +30,7 @@ public func attributesWithValues(attributes: [String:AnyObject?]) -> AttributeFu
  - parameter attribute: The attribute name to apply.
  - parameter value:     The attribute value to apply.
  */
-public func attribute(attribute: String, withValue value: AnyObject?) -> AttributeFunction
+public func attribute(name name: String, value: AnyObject?) -> AttributeFunction
 {
-    return attributesWithValues([attribute: value])
+    return attributes(values: [name: value])
 }

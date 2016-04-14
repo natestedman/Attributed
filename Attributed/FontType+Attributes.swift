@@ -28,6 +28,6 @@ public extension FontType
      */
     public func attribute(string: AttributedStringConvertible) -> AttributedStringConvertible
     {
-        return Attributed.attribute(NSFontAttributeName, withValue: self)(string)
+        return Attributed.attribute(name: NSFontAttributeName, value: self)(string)
     }
 }

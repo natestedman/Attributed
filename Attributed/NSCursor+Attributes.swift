@@ -26,7 +26,7 @@ extension NSCursor
      */
     public func attribute(string: AttributedStringConvertible) -> AttributedStringConvertible
     {
-        return Attributed.attribute(NSCursorAttributeName, withValue: self)(string)
+        return Attributed.attribute(name: NSCursorAttributeName, value: self)(string)
     }
 }
 

@@ -28,6 +28,6 @@ public extension NSTextAttachment
      */
     public func attribute(string: AttributedStringConvertible) -> AttributedStringConvertible
     {
-        return Attributed.attribute(NSAttachmentAttributeName, withValue: self)(string)
+        return Attributed.attribute(name: NSAttachmentAttributeName, value: self)(string)
     }
 }

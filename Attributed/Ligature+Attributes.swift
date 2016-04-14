@@ -28,6 +28,6 @@ public extension Ligature
      */
     public func attribute(string: AttributedStringConvertible) -> AttributedStringConvertible
     {
-        return Attributed.attribute(NSLigatureAttributeName, withValue: self.rawValue)(string)
+        return Attributed.attribute(name: NSLigatureAttributeName, value: self.rawValue)(string)
     }
 }

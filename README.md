@@ -33,14 +33,14 @@ Attributed defines the `AttributedStringConvertible` protocol, which allows clie
 The most important values in Attributed are _attribute functions_, which take an `AttributedStringConvertible` value as a parameter, and return a second `AttributedStringConvertible` value, with additional attributes applied. A basic attribute function can be created with the `attribute(_:withValue:)` function:
 
 ```swift
-let attributeFunction = attribute("Foo", withValue: "Bar")
+let attributeFunction = attribute(name: "Foo", value: "Bar")
 let attributedString = attributeFunction("Baz").attributedString
 ```
 
 Multiple attributes can also be set at once:
 
 ```swift
-let attributeFunction = attributesWithValues([
+let attributeFunction = attributes(values: [
     "Foo": "Bar",
     "Bar": "Foo"
 ])

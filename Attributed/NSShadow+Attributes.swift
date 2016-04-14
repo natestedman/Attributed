@@ -28,6 +28,6 @@ public extension NSShadow
      */
     public func attribute(string: AttributedStringConvertible) -> AttributedStringConvertible
     {
-        return Attributed.attribute(NSShadowAttributeName, withValue: self)(string)
+        return Attributed.attribute(name: NSShadowAttributeName, value: self)(string)
     }
 }
