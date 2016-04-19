@@ -21,6 +21,7 @@ custom_categories:
         - NSParagraphStyle
         - NSShadow
         - NSTextAttachment
+        - NSURL
         - NSUnderlineStyle
 
     - name: Sequence Extensions
