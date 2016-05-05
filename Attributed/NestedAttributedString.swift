@@ -25,7 +25,11 @@ extension NestedAttributedString: AttributedStringConvertible
 {
     var attributedString: NSAttributedString
     {
-        return attributedStringWithAddedAttributes([:])
+        #if swift(>=3.0)
+            return attributedStringWithAddedAttributes(attributes: [:])
+        #else
+            return attributedStringWithAddedAttributes([:])
+        #endif
     }
     
     func attributedStringWithAddedAttributes(attributes: [String : AnyObject]) -> NSAttributedString
@@ -43,7 +47,11 @@ extension NestedAttributedString: AttributedStringConvertible
         
         for child in children
         {
-            mutable.appendAttributedString(child.attributedStringWithAddedAttributes(combined))
+            #if swift(>=3.0)
+                mutable.append(child.attributedStringWithAddedAttributes(attributes: combined))
+            #else
+                mutable.appendAttributedString(child.attributedStringWithAddedAttributes(combined))
+            #endif
         }
         
         return mutable

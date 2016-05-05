@@ -15,3 +15,5 @@ DerivedData
 *.xcuserstate
 Carthage
 Documentation
+.build
+

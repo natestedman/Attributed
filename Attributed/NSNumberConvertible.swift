@@ -138,7 +138,11 @@ extension Int64: NSNumberConvertible
     /// The value, wrapped in an `NSNumber` instance.
     public var NSNumberValue: NSNumber
     {
-        return NSNumber(longLong: self)
+        #if swift(>=3.0)
+            return NSNumber(value: self)
+        #else
+            return NSNumber(longLong: self)
+        #endif
     }
 }
 
@@ -150,7 +154,11 @@ extension UInt64: NSNumberConvertible
     /// The value, wrapped in an `NSNumber` instance.
     public var NSNumberValue: NSNumber
     {
-        return NSNumber(unsignedLongLong: self)
+        #if swift(>=3.0)
+            return NSNumber(value: self)
+        #else
+            return NSNumber(unsignedLongLong: self)
+        #endif
     }
 }
 

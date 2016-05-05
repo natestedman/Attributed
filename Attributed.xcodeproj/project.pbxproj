@@ -182,7 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				43C993CA1BE3B9C700CF90DD /* Attributed */,
-				43C993D61BE3B9C700CF90DD /* AttributedTests */,
+				43C993D61BE3B9C700CF90DD /* Tests */,
 				43C993C91BE3B9C700CF90DD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -210,14 +210,14 @@
 			path = Attributed;
 			sourceTree = "<group>";
 		};
-		43C993D61BE3B9C700CF90DD /* AttributedTests */ = {
+		43C993D61BE3B9C700CF90DD /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				43C993D71BE3B9C700CF90DD /* AttributedTests.swift */,
 				43C993F01BE3C9CE00CF90DD /* AttributedStringConvertibleTests.swift */,
 				43C993D91BE3B9C700CF90DD /* Info.plist */,
 			);
-			path = AttributedTests;
+			path = Tests;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
@@ -604,7 +604,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = AttributedTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.natestedman.AttributedTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -615,7 +615,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = AttributedTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.natestedman.AttributedTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -669,7 +669,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = AttributedTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.natestedman.AttributedTests;
@@ -682,7 +682,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = AttributedTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.natestedman.AttributedTests;

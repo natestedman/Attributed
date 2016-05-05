@@ -86,12 +86,21 @@ extension NSAttributedString: AttributedStringConvertible
         
         for (attribute, value) in attributes
         {
+            #if swift(>=3.0)
+            mutable.enumerateAttribute(attribute, in: range, options: options, using: { current, range, _ in
+                if current == nil
+                {
+                    mutable.addAttribute(attribute, value: value, range: range)
+                }
+            })
+            #else
             mutable.enumerateAttribute(attribute, inRange: range, options: options, usingBlock: { current, range, _ in
                 if current == nil
                 {
                     mutable.addAttribute(attribute, value: value, range: range)
                 }
             })
+            #endif
         }
         
         return mutable
