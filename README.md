@@ -30,7 +30,7 @@ label.attributedText = [
 Attributed defines the `AttributedStringConvertible` protocol, which allows clients to create an `NSAttributedString` value with the `attributedString` property. `String` and `NSAttributedString` are extended to conform to this protocol.
 
 ### Attribute Functions
-The most important values in Attributed are _attribute functions_, which take an `AttributedStringConvertible` value as a parameter, and return a second `AttributedStringConvertible` value, with additional attributes applied. A basic attribute function can be created with the `attribute(_:withValue:)` function:
+The most important values in Attributed are _attribute functions_, which take an `AttributedStringConvertible` value as a parameter, and return a second `AttributedStringConvertible` value, with additional attributes applied. A basic attribute function can be created with the `attribute(name:value:)` function:
 
 ```swift
 let attributeFunction = attribute(name: "Foo", value: "Bar")
