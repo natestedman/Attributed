@@ -26,7 +26,7 @@ public extension NSShadow
      
      - parameter string: The attributed string convertible to apply the shadow to.
      */
-    public func attribute(string: AttributedStringConvertible) -> AttributedStringConvertible
+    public func attribute(_ string: AttributedStringConvertible) -> AttributedStringConvertible
     {
         return Attributed.attribute(name: NSShadowAttributeName, value: self)(string)
     }

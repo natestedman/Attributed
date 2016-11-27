@@ -26,8 +26,8 @@ public extension Ligature
      
      - parameter string: The attributed string convertible to apply the ligature setting to.
      */
-    public func attribute(string: AttributedStringConvertible) -> AttributedStringConvertible
+    public func attribute(_ string: AttributedStringConvertible) -> AttributedStringConvertible
     {
-        return Attributed.attribute(name: NSLigatureAttributeName, value: self.rawValue)(string)
+        return Attributed.attribute(name: NSLigatureAttributeName, value: NSNumber(value: rawValue))(string)
     }
 }

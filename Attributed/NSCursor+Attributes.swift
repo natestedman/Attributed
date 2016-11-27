@@ -24,7 +24,7 @@ extension NSCursor
      
      - parameter string: The attributed string convertible to apply the cursor to.
      */
-    public func attribute(string: AttributedStringConvertible) -> AttributedStringConvertible
+    public func attribute(_ string: AttributedStringConvertible) -> AttributedStringConvertible
     {
         return Attributed.attribute(name: NSCursorAttributeName, value: self)(string)
     }

@@ -26,7 +26,7 @@ public extension NSParagraphStyle
      
      - parameter string: The attributed string convertible to apply the paragraph style to.
      */
-    public func attribute(string: AttributedStringConvertible) -> AttributedStringConvertible
+    public func attribute(_ string: AttributedStringConvertible) -> AttributedStringConvertible
     {
         return Attributed.attribute(name: NSParagraphStyleAttributeName, value: self)(string)
     }

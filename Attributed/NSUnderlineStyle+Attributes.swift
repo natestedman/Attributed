@@ -26,9 +26,12 @@ public extension NSUnderlineStyle
      
      - parameter string: The attributed string convertible to apply the underline style to.
      */
-    public func attribute(string: AttributedStringConvertible) -> AttributedStringConvertible
+    public func attribute(_ string: AttributedStringConvertible) -> AttributedStringConvertible
     {
-        return Attributed.attribute(name: NSUnderlineStyleAttributeName, value: self.rawValue)(string)
+        return Attributed.attribute(
+            name: NSUnderlineStyleAttributeName,
+            value: NSNumber(value: rawValue)
+        )(string)
     }
     
     // MARK: - Strikethrough
@@ -40,8 +43,11 @@ public extension NSUnderlineStyle
      
      - parameter string: The attributed string convertible to apply the strikethrough style to.
      */
-    public func strikethroughAttribute(string: AttributedStringConvertible) -> AttributedStringConvertible
+    public func strikethroughAttribute(_ string: AttributedStringConvertible) -> AttributedStringConvertible
     {
-        return Attributed.attribute(name: NSStrikethroughStyleAttributeName, value: self.rawValue)(string)
+        return Attributed.attribute(
+            name: NSStrikethroughStyleAttributeName,
+            value: NSNumber(value: rawValue)
+        )(string)
     }
 }

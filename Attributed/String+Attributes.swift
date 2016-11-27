@@ -23,9 +23,9 @@ extension String
      
      - parameter string: The attributed string convertible to apply the tooltip to.
      */
-    public func toolTipAttribute(string: AttributedStringConvertible) -> AttributedStringConvertible
+    public func toolTipAttribute(_ string: AttributedStringConvertible) -> AttributedStringConvertible
     {
-        return Attributed.attribute(name: NSToolTipAttributeName, value: self)(string)
+        return Attributed.attribute(name: NSToolTipAttributeName, value: self as NSString)(string)
     }
 }
 #endif

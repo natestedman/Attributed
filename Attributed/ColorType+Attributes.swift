@@ -26,7 +26,7 @@ public extension ColorType
      
      - parameter string: The attributed string convertible to apply the foreground color to.
      */
-    public func foregroundAttribute(string: AttributedStringConvertible) -> AttributedStringConvertible
+    public func foregroundAttribute(_ string: AttributedStringConvertible) -> AttributedStringConvertible
     {
         return Attributed.attribute(name: NSForegroundColorAttributeName, value: self)(string)
     }
@@ -40,7 +40,7 @@ public extension ColorType
      
      - parameter string: The attributed string convertible to apply the background color to.
      */
-    public func backgroundAttribute(string: AttributedStringConvertible) -> AttributedStringConvertible
+    public func backgroundAttribute(_ string: AttributedStringConvertible) -> AttributedStringConvertible
     {
         return Attributed.attribute(name: NSBackgroundColorAttributeName, value: self)(string)
     }
@@ -54,7 +54,7 @@ public extension ColorType
      
      - parameter string: The attributed string convertible to apply the underline color to.
      */
-    public func underlineAttribute(string: AttributedStringConvertible) -> AttributedStringConvertible
+    public func underlineAttribute(_ string: AttributedStringConvertible) -> AttributedStringConvertible
     {
         return Attributed.attribute(name: NSUnderlineColorAttributeName, value: self)(string)
     }
@@ -68,7 +68,7 @@ public extension ColorType
      
      - parameter string: The attributed string convertible to apply the strikethrough color to.
      */
-    public func strikethroughAttribute(string: AttributedStringConvertible) -> AttributedStringConvertible
+    public func strikethroughAttribute(_ string: AttributedStringConvertible) -> AttributedStringConvertible
     {
         return Attributed.attribute(name: NSStrikethroughColorAttributeName, value: self)(string)
     }

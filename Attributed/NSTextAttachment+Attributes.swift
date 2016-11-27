@@ -26,7 +26,7 @@ public extension NSTextAttachment
      
      - parameter string: The attributed string convertible to apply the text attachment to.
      */
-    public func attribute(string: AttributedStringConvertible) -> AttributedStringConvertible
+    public func attribute(_ string: AttributedStringConvertible) -> AttributedStringConvertible
     {
         return Attributed.attribute(name: NSAttachmentAttributeName, value: self)(string)
     }

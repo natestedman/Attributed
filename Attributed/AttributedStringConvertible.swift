@@ -26,7 +26,7 @@ import Foundation
 /// If writing code that should compose with Attributed, it typically makes sense to write functions that will apply
 /// attributes in terms of `AttributeFunction`. If additional parameters are required, it's better to return a closure
 /// than to accept an `AttributedStringConvertible` alongside other parameters.
-public typealias AttributeFunction = AttributedStringConvertible -> AttributedStringConvertible
+public typealias AttributeFunction = (AttributedStringConvertible) -> AttributedStringConvertible
 
 // MARK: - Protocol
 
@@ -41,7 +41,7 @@ public protocol AttributedStringConvertible
      
      - parameter attributes: The attributes to apply.
      */
-    func attributedStringWithAddedAttributes(attributes: [String:AnyObject]) -> NSAttributedString
+    func attributedString(addedAttributes: [String:AnyObject]) -> NSAttributedString
 }
 
 // MARK: - String
@@ -58,9 +58,9 @@ extension String: AttributedStringConvertible
     }
     
     /// Required to conform to `AttributedStringConvertible`.
-    public func attributedStringWithAddedAttributes(attributes: [String : AnyObject]) -> NSAttributedString
+    public func attributedString(addedAttributes: [String : AnyObject]) -> NSAttributedString
     {
-        return NSAttributedString(string: self, attributes: attributes)
+        return NSAttributedString(string: self, attributes: addedAttributes)
     }
 }
 
@@ -78,29 +78,20 @@ extension NSAttributedString: AttributedStringConvertible
     }
     
     /// Required to conform to `AttributedStringConvertible`.
-    public func attributedStringWithAddedAttributes(attributes: [String : AnyObject]) -> NSAttributedString
+    public func attributedString(addedAttributes: [String : AnyObject]) -> NSAttributedString
     {
         let mutable = NSMutableAttributedString(attributedString: self)
         let range = NSMakeRange(0, mutable.length)
-        let options = NSAttributedStringEnumerationOptions()
+        let options = NSAttributedString.EnumerationOptions()
         
-        for (attribute, value) in attributes
+        for (attribute, value) in addedAttributes
         {
-            #if swift(>=3.0)
             mutable.enumerateAttribute(attribute, in: range, options: options, using: { current, range, _ in
                 if current == nil
                 {
                     mutable.addAttribute(attribute, value: value, range: range)
                 }
             })
-            #else
-            mutable.enumerateAttribute(attribute, inRange: range, options: options, usingBlock: { current, range, _ in
-                if current == nil
-                {
-                    mutable.addAttribute(attribute, value: value, range: range)
-                }
-            })
-            #endif
         }
         
         return mutable

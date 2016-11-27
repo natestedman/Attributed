@@ -26,7 +26,7 @@ public extension NSNumberConvertible
      
      - parameter string: The attributed string convertible to apply the baseline offset to.
      */
-    public func baselineOffsetAttribute(string: AttributedStringConvertible) -> AttributedStringConvertible
+    public func baselineOffsetAttribute(_ string: AttributedStringConvertible) -> AttributedStringConvertible
     {
         return Attributed.attribute(name: NSBaselineOffsetAttributeName, value: self.NSNumberValue)(string)
     }
@@ -40,7 +40,7 @@ public extension NSNumberConvertible
 
      - parameter string: The attributed string convertible to apply the expansion to.
      */
-    public func expansionAttribute(string: AttributedStringConvertible) -> AttributedStringConvertible
+    public func expansionAttribute(_ string: AttributedStringConvertible) -> AttributedStringConvertible
     {
         return Attributed.attribute(name: NSExpansionAttributeName, value: self.NSNumberValue)(string)
     }
@@ -54,7 +54,7 @@ public extension NSNumberConvertible
      
      - parameter string: The attributed string convertible to apply the kerning attribute to.
      */
-    func kernAttribute(string: AttributedStringConvertible) -> AttributedStringConvertible
+    func kernAttribute(_ string: AttributedStringConvertible) -> AttributedStringConvertible
     {
         return Attributed.attribute(name: NSKernAttributeName, value: self.NSNumberValue)(string)
     }

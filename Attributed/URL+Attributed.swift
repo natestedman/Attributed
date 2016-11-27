@@ -16,8 +16,8 @@ import Foundation
     import AppKit
 #endif
 
-/// `NSURL` is extended to provide support for link attributes.
-extension NSURL
+/// `URL` is extended to provide support for link attributes.
+extension URL
 {
     // MARK: - Link
 
@@ -28,8 +28,8 @@ extension NSURL
 
      - parameter string: The attributed string convertible to apply the link to.
      */
-    public func attribute(string: AttributedStringConvertible) -> AttributedStringConvertible
+    public func attribute(_ string: AttributedStringConvertible) -> AttributedStringConvertible
     {
-        return Attributed.attribute(name: NSLinkAttributeName, value: self)(string)
+        return Attributed.attribute(name: NSLinkAttributeName, value: self as NSURL)(string)
     }
 }

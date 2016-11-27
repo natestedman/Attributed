@@ -42,7 +42,7 @@ extension Int: NSNumberConvertible
     /// The value, wrapped in an `NSNumber` instance.
     public var NSNumberValue: NSNumber
     {
-        return self
+        return NSNumber(value: self)
     }
 }
 
@@ -54,7 +54,7 @@ extension UInt: NSNumberConvertible
     /// The value, wrapped in an `NSNumber` instance.
     public var NSNumberValue: NSNumber
     {
-        return self
+        return NSNumber(value: self)
     }
 }
 
@@ -66,7 +66,7 @@ extension Int8: NSNumberConvertible
     /// The value, wrapped in an `NSNumber` instance.
     public var NSNumberValue: NSNumber
     {
-        return Int(self)
+        return NSNumber(value: self)
     }
 }
 
@@ -78,7 +78,7 @@ extension UInt8: NSNumberConvertible
     /// The value, wrapped in an `NSNumber` instance.
     public var NSNumberValue: NSNumber
     {
-        return UInt(self)
+        return NSNumber(value: self)
     }
 }
 
@@ -90,7 +90,7 @@ extension Int16: NSNumberConvertible
     /// The value, wrapped in an `NSNumber` instance.
     public var NSNumberValue: NSNumber
     {
-        return Int(self)
+        return NSNumber(value: self)
     }
 }
 
@@ -102,7 +102,7 @@ extension UInt16: NSNumberConvertible
     /// The value, wrapped in an `NSNumber` instance.
     public var NSNumberValue: NSNumber
     {
-        return UInt(self)
+        return NSNumber(value: self)
     }
 }
 
@@ -114,7 +114,7 @@ extension Int32: NSNumberConvertible
     /// The value, wrapped in an `NSNumber` instance.
     public var NSNumberValue: NSNumber
     {
-        return Int(self)
+        return NSNumber(value: self)
     }
 }
 
@@ -126,7 +126,7 @@ extension UInt32: NSNumberConvertible
     /// The value, wrapped in an `NSNumber` instance.
     public var NSNumberValue: NSNumber
     {
-        return UInt(self)
+        return NSNumber(value: self)
     }
 }
 
@@ -138,11 +138,7 @@ extension Int64: NSNumberConvertible
     /// The value, wrapped in an `NSNumber` instance.
     public var NSNumberValue: NSNumber
     {
-        #if swift(>=3.0)
-            return NSNumber(value: self)
-        #else
-            return NSNumber(longLong: self)
-        #endif
+        return NSNumber(value: self)
     }
 }
 
@@ -154,11 +150,7 @@ extension UInt64: NSNumberConvertible
     /// The value, wrapped in an `NSNumber` instance.
     public var NSNumberValue: NSNumber
     {
-        #if swift(>=3.0)
-            return NSNumber(value: self)
-        #else
-            return NSNumber(unsignedLongLong: self)
-        #endif
+        return NSNumber(value: self)
     }
 }
 
@@ -170,7 +162,7 @@ extension Float: NSNumberConvertible
     /// The value, wrapped in an `NSNumber` instance.
     public var NSNumberValue: NSNumber
     {
-        return self
+        return NSNumber(value: self)
     }
 }
 
@@ -182,7 +174,7 @@ extension Double: NSNumberConvertible
     /// The value, wrapped in an `NSNumber` instance.
     public var NSNumberValue: NSNumber
     {
-        return self
+        return NSNumber(value: self)
     }
 }
 
@@ -194,6 +186,6 @@ extension CGFloat: NSNumberConvertible
     /// The value, wrapped in an `NSNumber` instance.
     public var NSNumberValue: NSNumber
     {
-        return self
+        return NSNumber(value: Double(self))
     }
 }

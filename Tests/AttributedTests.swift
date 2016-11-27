@@ -15,22 +15,22 @@ class AttributedTests: XCTestCase
 {
     func testNestedColors()
     {
-        let attributed = ColorType.redColor().foregroundAttribute([
+        let attributed = ColorType.red.foregroundAttribute([
             "Test",
-            ColorType.blueColor().foregroundAttribute([
+            ColorType.blue.foregroundAttribute([
                 "Test",
-                ColorType.greenColor().foregroundAttribute("Test"),
+                ColorType.green.foregroundAttribute("Test"),
                 "Test"
             ].join()),
             "Test"
         ].join()).attributedString
         
         let mutable = NSMutableAttributedString(string: "TestTestTestTestTest")
-        mutable.addAttribute(NSForegroundColorAttributeName, value: ColorType.redColor(), range: NSMakeRange(0, 4))
-        mutable.addAttribute(NSForegroundColorAttributeName, value: ColorType.blueColor(), range: NSMakeRange(4, 4))
-        mutable.addAttribute(NSForegroundColorAttributeName, value: ColorType.greenColor(), range: NSMakeRange(8, 4))
-        mutable.addAttribute(NSForegroundColorAttributeName, value: ColorType.blueColor(), range: NSMakeRange(12, 4))
-        mutable.addAttribute(NSForegroundColorAttributeName, value: ColorType.redColor(), range: NSMakeRange(16, 4))
+        mutable.addAttribute(NSForegroundColorAttributeName, value: ColorType.red, range: NSMakeRange(0, 4))
+        mutable.addAttribute(NSForegroundColorAttributeName, value: ColorType.blue, range: NSMakeRange(4, 4))
+        mutable.addAttribute(NSForegroundColorAttributeName, value: ColorType.green, range: NSMakeRange(8, 4))
+        mutable.addAttribute(NSForegroundColorAttributeName, value: ColorType.blue, range: NSMakeRange(12, 4))
+        mutable.addAttribute(NSForegroundColorAttributeName, value: ColorType.red, range: NSMakeRange(16, 4))
         
         XCTAssertEqual(attributed, mutable)
     }
@@ -39,9 +39,9 @@ class AttributedTests: XCTestCase
     {
         let attributed = 10.kernAttribute([
             "Test",
-            ColorType.blueColor().foregroundAttribute([
+            ColorType.blue.foregroundAttribute([
                 "Test",
-                ColorType.greenColor().foregroundAttribute("Test"),
+                ColorType.green.foregroundAttribute("Test"),
                 "Test"
             ].join()),
             "Test"
@@ -49,26 +49,26 @@ class AttributedTests: XCTestCase
         
         let mutable = NSMutableAttributedString(string: "TestTestTestTestTest")
         mutable.addAttribute(NSKernAttributeName, value: 10, range: NSMakeRange(0, 20))
-        mutable.addAttribute(NSForegroundColorAttributeName, value: ColorType.blueColor(), range: NSMakeRange(4, 4))
-        mutable.addAttribute(NSForegroundColorAttributeName, value: ColorType.greenColor(), range: NSMakeRange(8, 4))
-        mutable.addAttribute(NSForegroundColorAttributeName, value: ColorType.blueColor(), range: NSMakeRange(12, 4))
+        mutable.addAttribute(NSForegroundColorAttributeName, value: ColorType.blue, range: NSMakeRange(4, 4))
+        mutable.addAttribute(NSForegroundColorAttributeName, value: ColorType.green, range: NSMakeRange(8, 4))
+        mutable.addAttribute(NSForegroundColorAttributeName, value: ColorType.blue, range: NSMakeRange(12, 4))
         
         XCTAssertEqual(attributed, mutable)
     }
     
     func testNilValue()
     {
-        let attributed = ColorType.blueColor().foregroundAttribute([
+        let attributed = ColorType.blue.foregroundAttribute([
             "Test",
             attribute(name: NSForegroundColorAttributeName, value: nil)([
                 "Test",
-                ColorType.greenColor().foregroundAttribute("Test")
+                ColorType.green.foregroundAttribute("Test")
             ].join())
         ].join()).attributedString
         
         let mutable = NSMutableAttributedString(string: "TestTestTest")
-        mutable.addAttribute(NSForegroundColorAttributeName, value: ColorType.blueColor(), range: NSMakeRange(0, 4))
-        mutable.addAttribute(NSForegroundColorAttributeName, value: ColorType.greenColor(), range: NSMakeRange(8, 4))
+        mutable.addAttribute(NSForegroundColorAttributeName, value: ColorType.blue, range: NSMakeRange(0, 4))
+        mutable.addAttribute(NSForegroundColorAttributeName, value: ColorType.green, range: NSMakeRange(8, 4))
         
         XCTAssertEqual(attributed, mutable)
     }
@@ -77,11 +77,11 @@ class AttributedTests: XCTestCase
     {
         let attributed = [
             "Test",
-            NSAttributedString(string: "Test", attributes: [NSForegroundColorAttributeName: ColorType.redColor()])
+            NSAttributedString(string: "Test", attributes: [NSForegroundColorAttributeName: ColorType.red])
         ].join().attributedString
         
         let mutable = NSMutableAttributedString(string: "TestTest")
-        mutable.addAttribute(NSForegroundColorAttributeName, value: ColorType.redColor(), range: NSMakeRange(4, 4))
+        mutable.addAttribute(NSForegroundColorAttributeName, value: ColorType.red, range: NSMakeRange(4, 4))
         
         XCTAssertEqual(attributed, mutable)
     }
@@ -89,8 +89,8 @@ class AttributedTests: XCTestCase
     func testFunctionJoin()
     {
         let functions = [
-            ColorType.blackColor().foregroundAttribute,
-            ColorType.redColor().backgroundAttribute,
+            ColorType.black.foregroundAttribute,
+            ColorType.red.backgroundAttribute,
             2.kernAttribute
         ]
         
@@ -99,8 +99,8 @@ class AttributedTests: XCTestCase
             NSAttributedString(
                 string: "Test",
                 attributes: [
-                    NSForegroundColorAttributeName: ColorType.blackColor(),
-                    NSBackgroundColorAttributeName: ColorType.redColor(),
+                    NSForegroundColorAttributeName: ColorType.black,
+                    NSBackgroundColorAttributeName: ColorType.red,
                     NSKernAttributeName: 2
                 ]
             )
@@ -110,14 +110,14 @@ class AttributedTests: XCTestCase
     func testFunctionJoinOverride()
     {
         let functions = [
-            ColorType.redColor().foregroundAttribute,
-            ColorType.greenColor().foregroundAttribute,
-            ColorType.blueColor().foregroundAttribute,
+            ColorType.red.foregroundAttribute,
+            ColorType.green.foregroundAttribute,
+            ColorType.blue.foregroundAttribute,
         ]
         
         XCTAssertEqual(
             functions.join()("Test").attributedString,
-            NSAttributedString(string: "Test", attributes: [NSForegroundColorAttributeName: ColorType.blueColor()])
+            NSAttributedString(string: "Test", attributes: [NSForegroundColorAttributeName: ColorType.blue])
         )
     }
 }

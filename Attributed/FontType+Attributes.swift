@@ -26,7 +26,7 @@ public extension FontType
      
      - parameter string: The attributed string convertible to apply the font to.
      */
-    public func attribute(string: AttributedStringConvertible) -> AttributedStringConvertible
+    public func attribute(_ string: AttributedStringConvertible) -> AttributedStringConvertible
     {
         return Attributed.attribute(name: NSFontAttributeName, value: self)(string)
     }
