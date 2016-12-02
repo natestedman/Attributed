@@ -6,3 +6,5 @@ before_install: true
 install: true
 git:
   submodules: false
+script:
+  - xcodebuild -project Attributed.xcodeproj -scheme Attributed-OSX build test
