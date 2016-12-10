@@ -20,7 +20,7 @@ class AttributedStringConvertibleTests: XCTestCase
         string.addAttribute(NSForegroundColorAttributeName, value: ColorType.blue, range: NSMakeRange(1, 2))
         
         // apply the red color over the entire string, but avoid overriding
-        let added = string.attributedString(addedAttributes: [NSForegroundColorAttributeName: ColorType.red])
+        let added = string.attributedString(adding: [NSForegroundColorAttributeName: ColorType.red])
         
         /// manually create the same string
         let copy = NSMutableAttributedString(attributedString: string)
@@ -33,7 +33,7 @@ class AttributedStringConvertibleTests: XCTestCase
     func testString()
     {
         let string = "Test"
-        let added = string.attributedString(addedAttributes: [NSForegroundColorAttributeName: ColorType.blue])
+        let added = string.attributedString(adding: [NSForegroundColorAttributeName: ColorType.blue])
         let manual = NSAttributedString(string: string, attributes: [NSForegroundColorAttributeName: ColorType.blue])
         
         XCTAssertEqual(added, manual)

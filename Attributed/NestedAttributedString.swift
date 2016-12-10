@@ -25,13 +25,13 @@ extension NestedAttributedString: AttributedStringConvertible
 {
     var attributedString: NSAttributedString
     {
-        return attributedString(addedAttributes: [:])
+        return attributedString(adding: [:])
     }
     
-    func attributedString(addedAttributes: [String : AnyObject]) -> NSAttributedString
+    func attributedString(adding attributes: [String : AnyObject]) -> NSAttributedString
     {
         // combine the attributes, with our attributes overriding the passed-in attributes
-        var combined = addedAttributes
+        var combined = attributes
         
         for (attribute, value) in attributes
         {
@@ -43,7 +43,7 @@ extension NestedAttributedString: AttributedStringConvertible
         
         for child in children
         {
-            mutable.append(child.attributedString(addedAttributes: combined))
+            mutable.append(child.attributedString(adding: combined))
         }
         
         return mutable
