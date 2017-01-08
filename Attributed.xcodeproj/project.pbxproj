@@ -48,6 +48,8 @@
 		43CDB1E41BE3FE6800440B11 /* AttributedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C993D71BE3B9C700CF90DD /* AttributedTests.swift */; };
 		43D5EA131BFF5FE200E48BD6 /* NSCursor+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5EA121BFF5FE200E48BD6 /* NSCursor+Attributes.swift */; };
 		43D5EA151C0026A400E48BD6 /* String+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5EA141C0026A400E48BD6 /* String+Attributes.swift */; };
+		43FBAF061E26B4E300C90514 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 43FBAF051E26B4E300C90514 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		43FBAF0A1E26B51600C90514 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 43FBAF091E26B51600C90514 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,29 @@
 			remoteInfo = Attributed;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		43FBAF041E26B4D500C90514 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				43FBAF061E26B4E300C90514 /* Nimble.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43FBAF081E26B50D00C90514 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				43FBAF0A1E26B51600C90514 /* Nimble.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		433A9C0D1BECF169009A3919 /* SequenceType+Join.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SequenceType+Join.swift"; sourceTree = "<group>"; };
@@ -95,6 +120,8 @@
 		43C994021BE3DDF900CF90DD /* Attributed-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Attributed-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43D5EA121BFF5FE200E48BD6 /* NSCursor+Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSCursor+Attributes.swift"; sourceTree = "<group>"; };
 		43D5EA141C0026A400E48BD6 /* String+Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Attributes.swift"; sourceTree = "<group>"; };
+		43FBAF051E26B4E300C90514 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		43FBAF091E26B51600C90514 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,12 +240,23 @@
 		43C993D61BE3B9C700CF90DD /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				43FBAF071E26B4F100C90514 /* Nimble */,
 				43C993D71BE3B9C700CF90DD /* AttributedTests.swift */,
 				43C993F01BE3C9CE00CF90DD /* AttributedStringConvertibleTests.swift */,
 				43C993D91BE3B9C700CF90DD /* Info.plist */,
 			);
 			path = Tests;
 			sourceTree = SOURCE_ROOT;
+		};
+		43FBAF071E26B4F100C90514 /* Nimble */ = {
+			isa = PBXGroup;
+			children = (
+				43FBAF091E26B51600C90514 /* Nimble.framework */,
+				43FBAF051E26B4E300C90514 /* Nimble.framework */,
+			);
+			name = Nimble;
+			path = ..;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -266,6 +304,7 @@
 				43C993CE1BE3B9C700CF90DD /* Sources */,
 				43C993CF1BE3B9C700CF90DD /* Frameworks */,
 				43C993D01BE3B9C700CF90DD /* Resources */,
+				43FBAF081E26B50D00C90514 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -302,6 +341,7 @@
 				43C993FE1BE3DDF900CF90DD /* Sources */,
 				43C993FF1BE3DDF900CF90DD /* Frameworks */,
 				43C994001BE3DDF900CF90DD /* Resources */,
+				43FBAF041E26B4D500C90514 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -613,6 +653,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/Mac";
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.natestedman.AttributedTests;
@@ -624,6 +665,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/Mac";
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.natestedman.AttributedTests;
@@ -678,6 +720,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
 				INFOPLIST_FILE = Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -691,6 +734,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
 				INFOPLIST_FILE = Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
