@@ -86,7 +86,7 @@ extension NSAttributedString: AttributedStringConvertible
         
         for (attribute, value) in attributes
         {
-            mutable.enumerateAttribute(attribute, in: range, options: options, using: { current, range, _ in
+            enumerateAttribute(attribute, in: range, options: options, using: { current, range, _ in
                 if current == nil
                 {
                     mutable.addAttribute(attribute, value: value, range: range)
