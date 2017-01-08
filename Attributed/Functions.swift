@@ -15,7 +15,7 @@
  
  - parameter attributes: The attributes to apply.
  */
-public func attributes(values: [String:AnyObject?]) -> AttributeFunction
+public func attributes(values: [String:Any]) -> AttributeFunction
 {
     return { NestedAttributedString(attributes: values, children: [$0]) }
 }
@@ -28,7 +28,7 @@ public func attributes(values: [String:AnyObject?]) -> AttributeFunction
  - parameter attribute: The attribute name to apply.
  - parameter value:     The attribute value to apply.
  */
-public func attribute(name: String, value: AnyObject?) -> AttributeFunction
+public func attribute(name: String, value: Any) -> AttributeFunction
 {
     return attributes(values: [name: value])
 }

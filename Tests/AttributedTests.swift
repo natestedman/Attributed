@@ -57,23 +57,6 @@ class AttributedTests: XCTestCase
         expect(attributed) == mutable
     }
     
-    func testNilValue()
-    {
-        let attributed = ColorType.blue.foregroundAttribute([
-            "Test",
-            attribute(name: NSForegroundColorAttributeName, value: nil)([
-                "Test",
-                ColorType.green.foregroundAttribute("Test")
-            ].join())
-        ].join()).attributedString
-        
-        let mutable = NSMutableAttributedString(string: "TestTestTest")
-        mutable.addAttribute(NSForegroundColorAttributeName, value: ColorType.blue, range: NSMakeRange(0, 4))
-        mutable.addAttribute(NSForegroundColorAttributeName, value: ColorType.green, range: NSMakeRange(8, 4))
-
-        expect(attributed) == mutable
-    }
-    
     func testStringJoin()
     {
         let attributed = [

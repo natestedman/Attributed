@@ -14,7 +14,7 @@ import Foundation
 internal struct NestedAttributedString
 {
     /// The attributes to apply over this string's children.
-    let attributes: [String:AnyObject?]
+    let attributes: [String:Any]
     
     /// The children of this attributed string.
     let children: [AttributedStringConvertible]
@@ -28,12 +28,12 @@ extension NestedAttributedString: AttributedStringConvertible
         return attributedString(adding: [:])
     }
     
-    func attributedString(adding attributes: [String : AnyObject]) -> NSAttributedString
+    func attributedString(adding attributes: [String:Any]) -> NSAttributedString
     {
         // combine the attributes, with our attributes overriding the passed-in attributes
         var combined = attributes
         
-        for (attribute, value) in attributes
+        for (attribute, value) in self.attributes
         {
             combined[attribute] = value
         }

@@ -41,7 +41,7 @@ public protocol AttributedStringConvertible
      
      - parameter attributes: The attributes to apply.
      */
-    func attributedString(adding attributes: [String:AnyObject]) -> NSAttributedString
+    func attributedString(adding attributes: [String:Any]) -> NSAttributedString
 }
 
 // MARK: - String
@@ -58,7 +58,7 @@ extension String: AttributedStringConvertible
     }
     
     /// Required to conform to `AttributedStringConvertible`.
-    public func attributedString(adding attributes: [String : AnyObject]) -> NSAttributedString
+    public func attributedString(adding attributes: [String:Any]) -> NSAttributedString
     {
         return NSAttributedString(string: self, attributes: attributes)
     }
@@ -78,7 +78,7 @@ extension NSAttributedString: AttributedStringConvertible
     }
     
     /// Required to conform to `AttributedStringConvertible`.
-    public func attributedString(adding attributes: [String : AnyObject]) -> NSAttributedString
+    public func attributedString(adding attributes: [String:Any]) -> NSAttributedString
     {
         let mutable = NSMutableAttributedString(attributedString: self)
         let range = NSMakeRange(0, mutable.length)
