@@ -9,6 +9,7 @@
 // this software. If not, see <http://creativecommons.org/publicdomain/zero/1.0/>.
 
 @testable import Attributed
+import Nimble
 import XCTest
 
 class AttributedStringConvertibleTests: XCTestCase
@@ -26,8 +27,8 @@ class AttributedStringConvertibleTests: XCTestCase
         let copy = NSMutableAttributedString(attributedString: string)
         copy.addAttribute(NSForegroundColorAttributeName, value: ColorType.red, range: NSMakeRange(0, 1))
         copy.addAttribute(NSForegroundColorAttributeName, value: ColorType.red, range: NSMakeRange(3, 1))
-        
-        XCTAssertEqual(added, copy)
+
+        expect(added) == copy
     }
     
     func testString()
@@ -35,7 +36,7 @@ class AttributedStringConvertibleTests: XCTestCase
         let string = "Test"
         let added = string.attributedString(adding: [NSForegroundColorAttributeName: ColorType.blue])
         let manual = NSAttributedString(string: string, attributes: [NSForegroundColorAttributeName: ColorType.blue])
-        
-        XCTAssertEqual(added, manual)
+
+        expect(added) == manual
     }
 }

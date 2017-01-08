@@ -9,6 +9,7 @@
 // this software. If not, see <http://creativecommons.org/publicdomain/zero/1.0/>.
 
 import Attributed
+import Nimble
 import XCTest
 
 class AttributedTests: XCTestCase
@@ -31,8 +32,8 @@ class AttributedTests: XCTestCase
         mutable.addAttribute(NSForegroundColorAttributeName, value: ColorType.green, range: NSMakeRange(8, 4))
         mutable.addAttribute(NSForegroundColorAttributeName, value: ColorType.blue, range: NSMakeRange(12, 4))
         mutable.addAttribute(NSForegroundColorAttributeName, value: ColorType.red, range: NSMakeRange(16, 4))
-        
-        XCTAssertEqual(attributed, mutable)
+
+        expect(attributed) == mutable
     }
     
     func testDeepNesting()
@@ -52,8 +53,8 @@ class AttributedTests: XCTestCase
         mutable.addAttribute(NSForegroundColorAttributeName, value: ColorType.blue, range: NSMakeRange(4, 4))
         mutable.addAttribute(NSForegroundColorAttributeName, value: ColorType.green, range: NSMakeRange(8, 4))
         mutable.addAttribute(NSForegroundColorAttributeName, value: ColorType.blue, range: NSMakeRange(12, 4))
-        
-        XCTAssertEqual(attributed, mutable)
+
+        expect(attributed) == mutable
     }
     
     func testNilValue()
@@ -69,8 +70,8 @@ class AttributedTests: XCTestCase
         let mutable = NSMutableAttributedString(string: "TestTestTest")
         mutable.addAttribute(NSForegroundColorAttributeName, value: ColorType.blue, range: NSMakeRange(0, 4))
         mutable.addAttribute(NSForegroundColorAttributeName, value: ColorType.green, range: NSMakeRange(8, 4))
-        
-        XCTAssertEqual(attributed, mutable)
+
+        expect(attributed) == mutable
     }
     
     func testStringJoin()
@@ -82,8 +83,8 @@ class AttributedTests: XCTestCase
         
         let mutable = NSMutableAttributedString(string: "TestTest")
         mutable.addAttribute(NSForegroundColorAttributeName, value: ColorType.red, range: NSMakeRange(4, 4))
-        
-        XCTAssertEqual(attributed, mutable)
+
+        expect(attributed) == mutable
     }
     
     func testFunctionJoin()
@@ -94,16 +95,13 @@ class AttributedTests: XCTestCase
             2.kernAttribute
         ]
         
-        XCTAssertEqual(
-            functions.join()("Test").attributedString,
-            NSAttributedString(
-                string: "Test",
-                attributes: [
-                    NSForegroundColorAttributeName: ColorType.black,
-                    NSBackgroundColorAttributeName: ColorType.red,
-                    NSKernAttributeName: 2
-                ]
-            )
+        expect(functions.join()("Test").attributedString) == NSAttributedString(
+            string: "Test",
+            attributes: [
+                NSForegroundColorAttributeName: ColorType.black,
+                NSBackgroundColorAttributeName: ColorType.red,
+                NSKernAttributeName: 2
+            ]
         )
     }
     
@@ -115,9 +113,9 @@ class AttributedTests: XCTestCase
             ColorType.blue.foregroundAttribute,
         ]
         
-        XCTAssertEqual(
-            functions.join()("Test").attributedString,
-            NSAttributedString(string: "Test", attributes: [NSForegroundColorAttributeName: ColorType.blue])
+        expect(functions.join()("Test").attributedString) == NSAttributedString(
+            string: "Test",
+            attributes: [NSForegroundColorAttributeName: ColorType.blue]
         )
     }
 }
